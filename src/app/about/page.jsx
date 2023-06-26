@@ -11,7 +11,6 @@ import Image from "next/image";
 import Link from "next/link";
 import fivestar from "../images/fivestar.png";
 import slide2 from "../images/hero2.png";
-import slide3 from "../images/hero4.png";
 
 export default function page() {
   return (
