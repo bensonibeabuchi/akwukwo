@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Node.js Fundamentals",
+    "description": "Learn the basics of Node.js and build scalable and efficient backend applications using JavaScript.",
+    "instructor": "Emily Davis",
+    "duration": "8 weeks",
+    "level": "Beginner",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-14.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile8.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "RESTful API Development with Express",
+    "description": "Master the concepts of building RESTful APIs using Express.js and create robust backend services for web applications.",
+    "instructor": "John Smith",
+    "duration": "10 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-21.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "Database Design and Management",
+    "description": "Gain a deep understanding of database design principles and learn how to effectively manage databases for backend development.",
+    "instructor": "Sarah Johnson",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-23.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile5.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "Authentication and Authorization",
+    "description": "Explore different authentication and authorization techniques to secure backend APIs and protect user data.",
+    "instructor": "Michael Brown",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-22.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile4.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "Serverless Architecture with AWS Lambda",
+    "description": "Learn to build scalable and cost-effective backend applications using serverless architecture with AWS Lambda.",
+    "instructor": "Sophia Martinez",
+    "duration": "8 weeks",
+    "level": "Advanced",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-18.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile2.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "Building RESTful APIs with Django",
+    "description": "Discover how to create RESTful APIs using Django and Django REST Framework for efficient backend development.",
+    "instructor": "David Thompson",
+    "duration": "10 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-24.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile1.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "Real-Time Applications with WebSocket",
+    "description": "Learn to develop real-time applications using WebSocket to enable bidirectional communication between clients and servers.",
+    "instructor": "Laura Wilson",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-49.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile16.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "Microservices Architecture with Docker and Kubernetes",
+    "description": "Explore the microservices architecture and learn to deploy containerized applications with Docker and Kubernetes.",
+    "instructor": "Daniel Lee",
+    "duration": "10 weeks",
+    "level": "Advanced",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-8.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true",
+    "price": "₦300,000"
+  }
+]

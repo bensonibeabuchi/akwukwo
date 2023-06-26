@@ -1,0 +1,84 @@
+[
+  {
+    "title": "Complete Web Design from Figma to Webflow to Freelancing",
+    "description": "3 in 1 Course: Learn to design websites with Figma, build with Webflow, and make a living freelancing.",
+    "instructor": "Vako Shvili",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "price": "₦350,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/productdesign/akwukwo_image-43.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
+  },
+  {
+    "title": "Introduction to Product Design",
+    "description": "Learn the fundamentals of product design and gain an understanding of the design process from ideation to prototyping.",
+    "instructor": "Emily Davis",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/productdesign/akwukwo_image-12.jpg?raw=true",
+    "price": "₦299,999"
+  },
+  {
+    "title": "User Research and Analysis",
+    "description": "Explore techniques for conducting user research and analyze data to inform and improve product design decisions.",
+    "instructor": "John Smith",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/productdesign/akwukwo_image-44.jpg?raw=true",
+    "price": "₦150,000"
+  },
+  {
+    "title": "Prototyping and Wireframing",
+    "description": "Master the art of creating prototypes and wireframes to effectively communicate and test product design concepts.",
+    "instructor": "Sarah Johnson",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/productdesign/akwukwo_image-47.jpg?raw=true",
+    "price": "₦100,000"
+  },
+  {
+    "title": "Visual Design Principles",
+    "description": "Develop a solid foundation in visual design principles, including typography, color theory, and layout techniques.",
+    "instructor": "Michael Brown",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/productdesign/akwukwo_image-13.jpg?raw=true",
+    "price": "₦250,000"
+  },
+  {
+    "title": "Interaction Design Fundamentals",
+    "description": "Learn the principles of interaction design and create engaging user experiences through effective interface design.",
+    "instructor": "Sophia Martinez",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/productdesign/akwukwo_image-48.jpg?raw=true",
+    "price": "₦149,000"
+  },
+  {
+    "title": "Mobile App Design",
+    "description": "Dive into the specifics of designing mobile apps, including user flows, screen layouts, and mobile UI best practices.",
+    "instructor": "David Thompson",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/productdesign/akwukwo_image-2.jpg?raw=true",
+    "price": "₦150,000"
+  },
+  {
+    "title": "Design Thinking for Innovation",
+    "description": "Learn how to apply design thinking methodologies to drive innovation and solve complex problems through human-centered design.",
+    "instructor": "Laura Wilson",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/productdesign/akwukwo_image-50.jpg?raw=true",
+    "price": "₦150,000"
+  },
+  {
+    "title": "Designing for Web Accessibility",
+    "description": "Discover the principles and techniques for creating inclusive and accessible web designs that can be enjoyed by all users.",
+    "instructor": "Daniel Lee",
+    "duration": "4 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/productdesign/akwukwo_image-30.jpg?raw=true",
+    "price": "₦50,000"
+  }
+]

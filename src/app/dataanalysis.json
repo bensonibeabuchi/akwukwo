@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Introduction to Data Analysis",
+    "description": "Learn the basics of data analysis and explore various techniques for extracting insights from datasets.",
+    "instructor": "Emily Davis",
+    "duration": "8 weeks",
+    "level": "Beginner",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-19.jpg?raw=true",
+    "price": "₦120,000"
+  },
+  {
+    "title": "Statistical Analysis with Python",
+    "description": "Master statistical analysis techniques using Python and apply them to real-world datasets.",
+    "instructor": "John Smith",
+    "duration": "10 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-20.jpg?raw=true",
+    "price": "₦250,000"
+  },
+  {
+    "title": "Data Visualization with Tableau",
+    "description": "Explore the power of data visualization using Tableau and create compelling visual representations of data.",
+    "instructor": "Sarah Johnson",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-27.jpg?raw=true",
+    "price": "₦550,000"
+  },
+  {
+    "title": "Machine Learning for Data Analysis",
+    "description": "Gain hands-on experience in applying machine learning algorithms to analyze and interpret complex datasets.",
+    "instructor": "Michael Brown",
+    "duration": "12 weeks",
+    "level": "Advanced",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-41.jpg?raw=true",
+    "price": "₦600,000"
+  },
+  {
+    "title": "Data Cleaning and Preprocessing",
+    "description": "Learn essential techniques for cleaning and preprocessing data to ensure accuracy and reliability in analysis.",
+    "instructor": "Sophia Martinez",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-29.jpg?raw=true",
+    "price": "₦150,000"
+  },
+  {
+    "title": "Data Analysis with SQL",
+    "description": "Master SQL queries and use them to perform data analysis tasks on relational databases.",
+    "instructor": "David Thompson",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-33.jpg?raw=true",
+    "price": "₦250,000"
+  },
+  {
+    "title": "Data Visualization with Python",
+    "description": "Learn how to create visually appealing and informative data visualizations using Python libraries like Matplotlib and Seaborn.",
+    "instructor": "Christopher Evans",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-34.jpg?raw=true",
+    "price": "₦350,000"
+  },
+  {
+    "title": "Data Analytics for Business",
+    "description": "Discover how data analysis can be leveraged to make data-driven decisions and drive business growth.",
+    "instructor": "Alexandra Adams",
+    "duration": "12 weeks",
+    "level": "Advanced",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-36.jpg?raw=true",
+    "price": "₦500,000"
+  },
+  {
+    "title": "Time Series Analysis",
+    "description": "Learn techniques for analyzing and forecasting time-based data to identify trends and patterns.",
+    "instructor": "Samuel Turner",
+    "duration": "10 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-37.jpg?raw=true",
+    "price": "₦400,000"
+  },
+  {
+    "title": "Advanced Excel for Data Analysis",
+    "description": "Master advanced Excel functions and techniques to efficiently analyze and manipulate data for insightful analysis.",
+    "instructor": "Olivia Robinson",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-38.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "Predictive Modeling and Forecasting",
+    "description": "Explore advanced predictive modeling techniques to make accurate forecasts and predictions based on historical data.",
+    "instructor": "William Johnson",
+    "duration": "8 weeks",
+    "level": "Advanced",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-39.jpg?raw=true",
+    "price": "₦200,000"
+  }
+]

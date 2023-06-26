@@ -1,0 +1,118 @@
+[
+  {
+    "title": "Advanced typography and design and illustration design.",
+    "description": "Master the essentials of HTML5, including semantic markup, forms, and multimedia integration.",
+    "instructor": "John Smith",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "price": "₦100,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-1.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
+  },
+  {
+    "title": "RESTful API Development with Express",
+    "description": "Master the concepts of building RESTful APIs using Express.js and create robust backend services for web applications.",
+    "instructor": "John Smith",
+    "duration": "10 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-6.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "Complete Web Design from Figma to Webflow to Freelancing",
+    "description": "3 in 1 Course: Learn to design websites with Figma, build with Webflow, and make a living freelancing.",
+    "instructor": "Vako Shvili",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "price": "₦350,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile9.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
+  },
+  {
+    "title": "Data Visualization with Tableau",
+    "description": "Explore the power of data visualization using Tableau and create compelling visual representations of data.",
+    "instructor": "Sarah Johnson",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-5.jpg?raw=true",
+    "price": "₦550,000"
+  },
+  {
+    "title": "Responsive Web Design",
+    "description": "Create responsive and mobile-friendly websites using media queries and flexible layouts.",
+    "instructor": "Michael Brown",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "price": "₦99,999",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-7.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
+  },
+  {
+    "title": "Data Analysis with SQL",
+    "description": "Master SQL queries and use them to perform data analysis tasks on relational databases.",
+    "instructor": "David Thompson",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-2.jpg?raw=true",
+    "price": "₦250,000"
+  },
+  {
+    "title": "Frontend Frameworks: Vue.js",
+    "description": "Discover Vue.js, a progressive JavaScript framework for building scalable and interactive web applications.",
+    "instructor": "Daniel Lee",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "price": "₦149,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-9.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile1.jpg?raw=true"
+  },
+  {
+    "title": "User Research and Analysis",
+    "description": "Explore techniques for conducting user research and analyze data to inform and improve product design decisions.",
+    "instructor": "John Smith",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile11.jpg?raw=true",
+    "price": "₦150,000"
+  },
+  {
+    "title": "Web Accessibility",
+    "description": "Learn how to create inclusive and accessible web experiences, covering WCAG guidelines and assistive technologies.",
+    "instructor": "Alex Johnson",
+    "duration": "4 weeks",
+    "level": "Intermediate",
+    "price": "₦129,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-18.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile3.jpg?raw=true"
+  },
+  {
+    "title": "Frontend Performance Optimization",
+    "description": "Optimize website performance through techniques like minification, caching, and image optimization.",
+    "instructor": "Jennifer Smith",
+    "duration": "4 weeks",
+    "level": "Advanced",
+    "price": "₦199,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-6.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile5.jpg?raw=true"
+  },
+  {
+    "title": "Authentication and Authorization",
+    "description": "Explore different authentication and authorization techniques to secure backend APIs and protect user data.",
+    "instructor": "Michael Brown",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-4.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile4.jpg?raw=true",
+    "price": "₦300,000"
+  },
+  {
+    "title": "JavaScript for Frontend Development",
+    "description": "Unlock the power of JavaScript and learn to create interactive and dynamic web applications.",
+    "instructor": "John Smith",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "price": "₦100,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-1.jpg?raw=true"
+  }
+]

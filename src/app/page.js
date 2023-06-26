@@ -1,113 +1,169 @@
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
+import headshot from "./images/hero1.png";
+import star from "./images/stars.png";
+import hero2 from "./images/hero2.png";
+import hero3 from "./images/hero3.png";
+import hero4 from "./images/hero4.png";
 
-export default function Home() {
+import Link from "next/link";
+import Courses from "./component/courses";
+import Testimonials from "./component/testimonials";
+import { FaQuoteLeft } from "react-icons/fa";
+
+export default function page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="bg-[#286f6b] mx-auto">
+      <div className="w-[1500px] mx-auto">
+        <div className="grid grid-cols-2 items-center ">
+          <div className="text-white">
+            <h1>Unlock Your Potential</h1>
+            <h1>Anytime, Anywhere</h1>
+            <p className="text-white py-8 w-4/5 leading-8">
+              Welcome to Akwukwo, your gateway to a world of knowledge and
+              growth. Explore our diverse range of courses, learn from industry
+              experts, and elevate your skills to new heights. Whether you're a
+              student, professional, or lifelong learner, we're here to empower
+              you on your learning journey. Start exploring today and unlock
+              your full potential!
+            </p>
+            <button className="px-6 py-4 hover:bg-white hover:text-green-700 hover:scale-105 hover:transition">
+              <Link href="./courses" className="hover:text-[#fcdc66]">
+                Browse courses
+              </Link>
+            </button>
+          </div>
+          <div>
+            <Image src={headshot} width={1000} height={800} alt="heroshot" />
+          </div>
         </div>
       </div>
+      <div className="bg-gray-100 pt-16">
+        <div className="py-2 mx-auto text-center ">
+          <h2 className="p-4">Our Top Courses</h2>
+          <nav className="flex mx-auto justify-between pt-4 pb-2 items-center">
+            <ul className="flex p-2 mx-auto space-x-16 text-3xl font-medium">
+              <li>
+                <Link
+                  href="/frontend"
+                  className="hover:hover:text-[#fcdc66] active:underline"
+                >
+                  Frontend Developement
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/backend"
+                  className="hover:hover:text-[#fcdc66] active:underline"
+                >
+                  Backend Developement
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/productdesign"
+                  className="hover:hover:text-[#fcdc66] active:underline"
+                >
+                  Product Design
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/dataanalysis"
+                  className="hover:hover:text-[#fcdc66] active:underline"
+                >
+                  Data Analysis
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <Courses />
+        </div>
+        <div className="w-[1500px] mx-auto mt-16">
+          <div className="grid grid-cols-2 items-center space-x-8">
+            <div>
+              <Image src={hero2} width={900} height={900} alt="heroshot" />
+            </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+            <div className="space-y-4 text-[#0a1f1e]">
+              <h1>
+                Best Education <br /> Platform
+              </h1>
+              <p className=" py-8 w-3/5 leading-8">
+                "Akwukwo is a game-changer in online education. The platform's
+                user-friendly interface and comprehensive course materials
+                exceeded my expectations. Thanks to Akwukwo, I've gained the
+                skills and confidence needed to succeed in today's competitive
+                job market."
+              </p>
+              <button className="px-6 py-4 hover:bg-green-700 hover:text-[#fcdc66] hover:scale-105 hover:transition">
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-[1500px] mx-auto mt-16">
+          <div className="grid grid-cols-2 items-center">
+            <div className="space-y-4 pl-24 text-[#0a1f1e] ">
+              <h1>
+                Our World class <br /> Instructors
+              </h1>
+              <p className="py-8 w-3/5 leading-8">
+                "Akwukwo is a game-changer in online education. The platform's
+                user-friendly interface and comprehensive course materials
+                exceeded my expectations. Thanks to Akwukwo, I've gained the
+                skills and confidence needed to succeed in today's competitive
+                job market."
+              </p>
+              <button className="px-6 py-4 hover:bg-green-700 hover:text-[#fcdc66] hover:scale-105 hover:transition">
+                Read More
+              </button>
+            </div>
+            <div>
+              <Image src={hero3} width={900} height={900} alt="heroshot" />
+            </div>
+          </div>
+        </div>
+        <div className="bg-[#286f6b] p-8 flex flex-col text-white mx-auto">
+          <div>
+            <h2 className="pb-4 text-center">What Our Student Say</h2>
+            <p className="italic font-medium mx-auto leading-40 pb-8 w-[600px] text-center">
+              "Akwukwo has revolutionized my learning experience. The platform
+              offers a wide range of courses with top-notch instructors. I've
+              gained valuable skills that have helped me excel in my career.
+              Highly recommended!" <br /> Chidinma Nwaneti.
+            </p>
+          </div>
+          <div>
+            <Testimonials />
+          </div>
+        </div>
+        <div className="w-[1500px] mx-auto pb-8">
+          <div className="grid pt-8 grid-cols-2 ">
+            <div className="pl-72 pt-40  text-[#0a1f1e] ">
+              <h1>Get ready to learn and grow your skill</h1>
+              <p className=" py-8 w-4/5 leading-8">
+                "Akwukwo is a game-changer in online education. The platform's
+                user-friendly interface and comprehensive course materials
+                exceeded my expectations. Thanks to Akwukwo, I've gained the
+                skills and confidence needed to succeed in today's competitive
+                job market."
+              </p>
+              <button className="px-6 py-4 hover:bg-green-700 hover:text-[#fcdc66] hover:scale-105 hover:transition">
+                <Link href="./courses" className="hover:text-[#fcdc66]">
+                  Get started now
+                </Link>
+              </button>
+            </div>
+            <div>
+              <Image src={hero4} width={900} height={900} alt="heroshot" />
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }

@@ -1,0 +1,128 @@
+[
+  {
+    "title": "HTML5 and CSS Fundamentals",
+    "description": "Master the essentials of HTML5 and CSS to build beautiful and responsive web pages.",
+    "instructor": "Emily Davis",
+    "duration": "6 weeks",
+    "level": "Beginner",
+    "price": "₦100,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-1.jpg?raw=true"
+  },
+  {
+    "title": "JavaScript for Frontend Development",
+    "description": "Unlock the power of JavaScript and learn to create interactive and dynamic web applications.",
+    "instructor": "John Smith",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "price": "₦100,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-10.jpg?raw=true"
+  },
+  {
+    "title": "Responsive Web Design",
+    "description": "Design and develop websites that seamlessly adapt to different screen sizes and devices.",
+    "instructor": "Sarah Johnson",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "price": "₦100,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-11.jpg?raw=true"
+  },
+  {
+    "title": "Frontend Frameworks: React",
+    "description": "Explore the popular React framework and build modern and scalable web applications.",
+    "instructor": "Michael Brown",
+    "duration": "10 weeks",
+    "level": "Advanced",
+    "price": "₦100,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-15.jpg?raw=true"
+  },
+  {
+    "title": "CSS3 Animation and Transitions",
+    "description": "Learn to create stunning animations and transitions using CSS3 for a visually captivating user experience.",
+    "instructor": "Sophia Martinez",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "price": "₦100,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-16.jpg?raw=true"
+  },
+  {
+    "title": "Frontend Frameworks: React",
+    "description": "Learn React, a popular JavaScript library for building dynamic and reusable user interfaces.",
+    "instructor": "Laura Wilson",
+    "duration": "8 weeks",
+    "level": "Advanced",
+    "price": "₦300,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-17.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile16.jpg?raw=true"
+  },
+  {
+    "title": "CSS3 Styling Techniques",
+    "description": "Learn advanced CSS3 styling techniques, including flexbox, grid layouts, and responsive design.",
+    "instructor": "Sarah Johnson",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "price": "₦200,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-25.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
+  },
+  {
+    "title": "JavaScript for Frontend Development",
+    "description": "Build interactive and dynamic web pages using JavaScript, covering DOM manipulation and event handling.",
+    "instructor": "David Thompson",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "price": "₦350,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-46.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
+  },
+  {
+    "title": "Responsive Web Design",
+    "description": "Create responsive and mobile-friendly websites using media queries and flexible layouts.",
+    "instructor": "Michael Brown",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "price": "₦149,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-5.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
+  },
+
+  {
+    "title": "Frontend Frameworks: Vue.js",
+    "description": "Discover Vue.js, a progressive JavaScript framework for building scalable and interactive web applications.",
+    "instructor": "Daniel Lee",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "price": "₦99,999",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-1.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile1.jpg?raw=true"
+  },
+  {
+    "title": "Web Accessibility",
+    "description": "Learn how to create inclusive and accessible web experiences, covering WCAG guidelines and assistive technologies.",
+    "instructor": "Alex Johnson",
+    "duration": "4 weeks",
+    "level": "Intermediate",
+    "price": "₦129,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-10.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile3.jpg?raw=true"
+  },
+  {
+    "title": "Frontend Performance Optimization",
+    "description": "Optimize website performance through techniques like minification, caching, and image optimization.",
+    "instructor": "Jennifer Smith",
+    "duration": "4 weeks",
+    "level": "Advanced",
+    "price": "₦199,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-11.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile5.jpg?raw=true"
+  },
+  {
+    "title": "Frontend Frameworks: Vue.js",
+    "description": "Discover Vue.js, a progressive JavaScript framework for building scalable and interactive web applications.",
+    "instructor": "Daniel Lee",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "price": "₦149,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-15.jpg?raw=true",
+    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true"
+  }
+]
