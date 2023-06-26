@@ -4,7 +4,7 @@ import headshot from "./images/hero1.png";
 import star from "./images/stars.png";
 import hero2 from "./images/hero2.png";
 import hero3 from "./images/hero3.png";
-import hero4 from "./images/hero4.png";
+import hero4 from "./images/hero3.png";
 
 import Link from "next/link";
 import Courses from "./component/courses";
@@ -127,7 +127,7 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="bg-[#286f6b] p-8 flex flex-col text-white mx-auto">
+        <div className="bg-[#286f6b] h-[800px] p-16 pb-32 flex flex-col text-white mx-auto">
           <div>
             <h2 className="pb-4 text-center">What Our Student Say</h2>
             <p className="italic font-medium mx-auto leading-40 pb-8 w-[600px] text-center">
@@ -141,11 +141,11 @@ export default function page() {
             <Testimonials />
           </div>
         </div>
-        <div className="w-[1500px] mx-auto pb-8">
-          <div className="grid pt-8 grid-cols-2 ">
-            <div className="pl-72 pt-40  text-[#0a1f1e] ">
+        <div className="w-[1500px] h-[700px] mx-auto">
+          <div className="grid pt-8 grid-cols-2 items-center ">
+            <div className="pl-8  space-y-4 mb-4 text-[#0a1f1e] ">
               <h1>Get ready to learn and grow your skill</h1>
-              <p className=" py-8 w-4/5 leading-8">
+              <p className="w-4/5 leading-8">
                 "Akwukwo is a game-changer in online education. The platform's
                 user-friendly interface and comprehensive course materials
                 exceeded my expectations. Thanks to Akwukwo, I've gained the
@@ -159,7 +159,7 @@ export default function page() {
               </button>
             </div>
             <div>
-              <Image src={hero4} width={900} height={900} alt="heroshot" />
+              <Image src={hero4} width={1000} height={300} alt="heroshot" />
             </div>
           </div>
         </div>
