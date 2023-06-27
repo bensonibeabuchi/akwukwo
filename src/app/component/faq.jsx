@@ -15,9 +15,9 @@ export default function faq() {
                   </h3>
                   <p>
                     Enrolling in a course is simple! Just browse our course
-                    catalog, select the course you're interested in, and click
-                    on the "Enroll" button. Follow the prompts to complete the
-                    enrollment process.
+                    catalog, select the course you&apos;re interested in, and
+                    click on the &apos;Enroll&apos; button. Follow the prompts
+                    to complete the enrollment process.
                   </p>
                 </li>
                 <li>
@@ -48,9 +48,9 @@ export default function faq() {
                   </h3>
                   <p>
                     Enrolling in a course is simple! Just browse our course
-                    catalog, select the course you're interested in, and click
-                    on the "Enroll" button. Follow the prompts to complete the
-                    enrollment process.
+                    catalog, select the course you&apos;re interested in, and
+                    click on the &apos;Enroll&apos; button. Follow the prompts
+                    to complete the enrollment process.
                   </p>
                 </li>
                 <li>
@@ -59,9 +59,9 @@ export default function faq() {
                   </h3>
                   <p>
                     Enrolling in a course is simple! Just browse our course
-                    catalog, select the course you're interested in, and click
-                    on the "Enroll" button. Follow the prompts to complete the
-                    enrollment process.
+                    catalog, select the course you&apos;re interested in, and
+                    click on the &apos;Enroll&apos; button. Follow the prompts
+                    to complete the enrollment process.
                   </p>
                 </li>
                 <li>
@@ -70,9 +70,9 @@ export default function faq() {
                   </h3>
                   <p>
                     Enrolling in a course is simple! Just browse our course
-                    catalog, select the course you're interested in, and click
-                    on the "Enroll" button. Follow the prompts to complete the
-                    enrollment process.
+                    catalog, select the course you&apos;re interested in, and
+                    click on the &apos;Enroll&apos; button. Follow the prompts
+                    to complete the enrollment process.
                   </p>
                 </li>
                 <li>
@@ -81,9 +81,7 @@ export default function faq() {
                   </h3>
                   <p>
                     Enrolling in a course is simple! Just browse our course
-                    catalog, select the course you're interested in, and click
-                    on the "Enroll" button. Follow the prompts to complete the
-                    enrollment process.
+                    catalog, select the course
                   </p>
                 </li>
                 <li>
@@ -92,9 +90,7 @@ export default function faq() {
                   </h3>
                   <p>
                     Enrolling in a course is simple! Just browse our course
-                    catalog, select the course you're interested in, and click
-                    on the "Enroll" button. Follow the prompts to complete the
-                    enrollment process.
+                    catalog, select the course
                   </p>
                 </li>
                 <li>
@@ -103,20 +99,17 @@ export default function faq() {
                   </h3>
                   <p>
                     Enrolling in a course is simple! Just browse our course
-                    catalog, select the course you're interested in, and click
-                    on the "Enroll" button. Follow the prompts to complete the
-                    enrollment process.
+                    catalog, select the course{" "}
                   </p>
                 </li>
+
                 <li>
                   <h3 className="text-lg font-medium">
                     How do I enroll in a course?
                   </h3>
                   <p>
                     Enrolling in a course is simple! Just browse our course
-                    catalog, select the course you're interested in, and click
-                    on the "Enroll" button. Follow the prompts to complete the
-                    enrollment process.
+                    catalog, select the course{" "}
                   </p>
                 </li>
               </ul>

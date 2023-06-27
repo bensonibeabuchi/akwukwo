@@ -27,7 +27,12 @@ export default function page() {
           {testimonials.map((testimonial) => (
             <SwiperSlide className="rounded-2xl bg-white p-16 mb-12 text-black">
               <div>
-                <Image src={fivestar} width={200} height={100} className="" />
+                <Image
+                  src={fivestar}
+                  width={200}
+                  height={100}
+                  alt="testimonial"
+                />
                 <p className="text-base overflow-hidden h-32 mt-2">
                   {testimonial.testimonial}
                 </p>

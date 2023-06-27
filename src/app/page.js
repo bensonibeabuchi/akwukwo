@@ -4,7 +4,7 @@ import headshot from "./images/hero1.png";
 import star from "./images/stars.png";
 import hero2 from "./images/hero2.png";
 import hero3 from "./images/hero3.png";
-import hero4 from "./images/hero3.png";
+import hero4 from "./images/hero4.png";
 
 import Link from "next/link";
 import Courses from "./component/courses";

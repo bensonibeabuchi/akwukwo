@@ -31,7 +31,7 @@ export default function page() {
         </div>
       </div>
       <div className="w-[1200px] mx-auto border my-16 p-8">
-        <h3 className="text-2xl font-semibold p-4">What you'll learn</h3>
+        <h3 className="text-2xl font-semibold p-4">What you&apos;ll learn</h3>
         <div className="text-lg">
           <table>
             <tbody>
@@ -55,7 +55,7 @@ export default function page() {
                 <td className="p-4">
                   <li>
                     Discover how to build web applications using popular
-                    frameworks like Express.js, leveraging Node.js's
+                    frameworks like Express.js, leveraging Node.js&apos;s
                     capabilities
                   </li>
                 </td>
