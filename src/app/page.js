@@ -159,7 +159,7 @@ export default function page() {
               </button>
             </div>
             <div>
-              <Image src={hero4} width={1000} height={300} alt="heroshot" />
+              <Image src={hero3} width={1000} height={300} alt="heroshot" />
             </div>
           </div>
         </div>
