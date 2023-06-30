@@ -10,6 +10,8 @@ import Faq from "../component/faq.jsx";
 
 export let backendCourses = [];
 
+backendCourses = backend.slice();
+
 export default function page() {
   return (
     <>
@@ -48,7 +50,11 @@ export default function page() {
         <div className="py-8 w-[1500px] mx-auto">
           <div>
             {backend.map((course) => (
-              <Link key={1}>
+              <Link
+                href={`/backend/${course.title}`}
+                passHref
+                key={backend.title}
+              >
                 <div className="p-8 bg-white mb-2">
                   <div className="grid grid-cols-3">
                     <div className="">

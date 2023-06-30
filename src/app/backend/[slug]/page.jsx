@@ -2,11 +2,109 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { backendCourses } from "../page";
+import fivestar from "src/app/images/fivestar.png";
 
-export default function page() {
+function fetchCourses(params) {
+  const bcourses = backendCourses.find(
+    (bcourse) => bcourse.title === params.slug
+  );
+
+  return bcourses;
+}
+
+export default async function page({ params }) {
+  const bcourses = fetchCourses(params);
   return (
     <div>
-      <h1>Hello World this is a slug</h1>
+      {backendCourses.map((course) => (
+        <>
+          <div className="w-full mx-auto bg-[#286f6b]">
+            <div className="w-[1500px] mx-auto grid grid-cols-2 items-center ">
+              <div className="pl-24 text-white space-y-2 py-4 ">
+                <h2 className="pt-16">{course.title}</h2>
+                <p className="text-white text-xl w-4/5">{course.description}</p>
+                <p className="text-gray-400">{course.instructor}</p>
+                <p>{course.duration}</p>
+                <p>{course.level}</p>
+                <Image src={fivestar} width={100} height={100} alt="fivestar" />
+                <p className="text-[#286f6b] font-bold text-3xl">₦300,000</p>
+              </div>
+              <div className="pl-4 overflow-clip h-96">
+                <Image
+                  src={course.image}
+                  width={550}
+                  height={300}
+                  alt="heroshot"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="w-[1200px] mx-auto border my-16 p-8">
+            <h3 className="text-2xl font-semibold p-4">
+              What you&apos;ll learn
+            </h3>
+            <div className="text-lg">
+              <table>
+                <tbody>
+                  <tr className="text-left">
+                    <td className="p-4">
+                      <li>
+                        Learn best practices for deploying Node.js applications
+                        to production environments, including considerations for
+                        scalability, performance optimization, and monitoring.
+                      </li>
+                    </td>
+                    <td className="p-4">
+                      <li>
+                        Understand how to structure and modularize your Node.js
+                        code using modules, and explore tools like NPM for
+                        managing external dependencies.
+                      </li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-4">
+                      <li>
+                        Discover how to build web applications using popular
+                        frameworks like Express.js, leveraging Node.js&apos;s
+                        capabilities
+                      </li>
+                    </td>
+                    <td className="p-4">
+                      <li>
+                        Explore the power of asynchronous programming in Node.js
+                        using callbacks, promises, and async/await and then bla
+                        bla bla bla bla bla bla
+                      </li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-4">
+                      <li>
+                        Dive into file system operations and learn how to read,
+                        write, and manipulate files using the built-in modules
+                        provided by Node.js
+                      </li>
+                    </td>
+                    <td className="p-4">
+                      <li>
+                        Gain a solid understanding of what Node.js is and its
+                        role in building scalable and efficient server-side
+                        applications.
+                      </li>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div className="w-[1200px] mx-auto pb-24">
+            <h3 className="text-3xl font-bold">Course Content</h3>
+          </div>
+        </>
+      ))}{" "}
+      */
     </div>
   );
 }
