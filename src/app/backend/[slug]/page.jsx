@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function page() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <h1>Hello World this is a slug</h1>
     </div>
   );
 }

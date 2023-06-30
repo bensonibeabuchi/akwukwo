@@ -12,6 +12,8 @@ import stars from "../images/fivestar.png";
 import dot from "../images/dot.png";
 import Faq from "../component/faq.jsx";
 
+export let backendCourses = [];
+
 export default function page() {
   return (
     <>
