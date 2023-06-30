@@ -4,7 +4,6 @@ import headshot from "./images/hero1.png";
 import star from "./images/stars.png";
 import hero2 from "./images/hero2.png";
 import hero3 from "./images/hero3.png";
-import hero4 from "./images/hero4.png";
 
 import Link from "next/link";
 import Courses from "./component/courses";
@@ -22,10 +21,10 @@ export default function page() {
             <p className="text-white py-8 w-4/5 leading-8">
               Welcome to Akwukwo, your gateway to a world of knowledge and
               growth. Explore our diverse range of courses, learn from industry
-              experts, and elevate your skills to new heights. Whether you're a
-              student, professional, or lifelong learner, we're here to empower
-              you on your learning journey. Start exploring today and unlock
-              your full potential!
+              experts, and elevate your skills to new heights. Whether
+              you&apos;re a student, professional, or lifelong learner,
+              we&apos;re here to empower you on your learning journey. Start
+              exploring today and unlock your full potential!
             </p>
             <button className="px-6 py-4 hover:bg-white hover:text-green-700 hover:scale-105 hover:transition">
               <Link href="./courses" className="hover:text-[#fcdc66]">
@@ -92,11 +91,11 @@ export default function page() {
                 Best Education <br /> Platform
               </h1>
               <p className=" py-8 w-3/5 leading-8">
-                "Akwukwo is a game-changer in online education. The platform's
-                user-friendly interface and comprehensive course materials
-                exceeded my expectations. Thanks to Akwukwo, I've gained the
-                skills and confidence needed to succeed in today's competitive
-                job market."
+                Akwukwo is a game-changer in online education. The
+                platform&apos;s user-friendly interface and comprehensive course
+                materials exceeded my expectations. Thanks to Akwukwo, I&apos;ve
+                gained the skills and confidence needed to succeed in
+                today&apos;s competitive job market.
               </p>
               <button className="px-6 py-4 hover:bg-green-700 hover:text-[#fcdc66] hover:scale-105 hover:transition">
                 Read More
@@ -112,11 +111,11 @@ export default function page() {
                 Our World class <br /> Instructors
               </h1>
               <p className="py-8 w-3/5 leading-8">
-                "Akwukwo is a game-changer in online education. The platform's
-                user-friendly interface and comprehensive course materials
-                exceeded my expectations. Thanks to Akwukwo, I've gained the
-                skills and confidence needed to succeed in today's competitive
-                job market."
+                Akwukwo is a game-changer in online education. The
+                platform&apos;s user-friendly interface and comprehensive course
+                materials exceeded my expectations. Thanks to Akwukwo, I&apos;ve
+                gained the skills and confidence needed to succeed in
+                today&apos;s competitive job market.
               </p>
               <button className="px-6 py-4 hover:bg-green-700 hover:text-[#fcdc66] hover:scale-105 hover:transition">
                 Read More
@@ -131,10 +130,10 @@ export default function page() {
           <div>
             <h2 className="pb-4 text-center">What Our Student Say</h2>
             <p className="italic font-medium mx-auto leading-40 pb-8 w-[600px] text-center">
-              "Akwukwo has revolutionized my learning experience. The platform
-              offers a wide range of courses with top-notch instructors. I've
-              gained valuable skills that have helped me excel in my career.
-              Highly recommended!" <br /> Chidinma Nwaneti.
+              Akwukwo has revolutionized my learning experience. The platform
+              offers a wide range of courses with top-notch instructors.
+              I&apos;ve gained valuable skills that have helped me excel in my
+              career. Highly recommended! <br /> Chidinma Nwaneti.
             </p>
           </div>
           <div>
@@ -146,11 +145,11 @@ export default function page() {
             <div className="pl-8  space-y-4 mb-4 text-[#0a1f1e] ">
               <h1>Get ready to learn and grow your skill</h1>
               <p className="w-4/5 leading-8">
-                "Akwukwo is a game-changer in online education. The platform's
-                user-friendly interface and comprehensive course materials
-                exceeded my expectations. Thanks to Akwukwo, I've gained the
-                skills and confidence needed to succeed in today's competitive
-                job market."
+                Akwukwo is a game-changer in online education. The
+                platform&apos;s user-friendly interface and comprehensive course
+                materials exceeded my expectations. Thanks to Akwukwo, I&apos;ve
+                gained the skills and confidence needed to succeed in
+                today&apos;s competitive job market.
               </p>
               <button className="px-6 py-4 hover:bg-green-700 hover:text-[#fcdc66] hover:scale-105 hover:transition">
                 <Link href="./courses" className="hover:text-[#fcdc66]">

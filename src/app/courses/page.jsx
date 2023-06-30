@@ -61,7 +61,7 @@ export default function page() {
             onSlideChange={() => console.log("slide change")}
           >
             {getRandomItems().map((course) => (
-              <SwiperSlide className="p-8 mb-12 bg-white rounded-xl">
+              <SwiperSlide key={1} className="p-8 mb-12 bg-white rounded-xl">
                 <div className="grid grid-cols-3">
                   <div className="">
                     <Image
@@ -116,7 +116,7 @@ export default function page() {
             onSlideChange={() => console.log("slide change")}
           >
             {frontend.map((course) => (
-              <SwiperSlide className="px-16 pb-16">
+              <SwiperSlide key={1} className="px-16 pb-16">
                 <div class="w-[400px] h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
                   <div className="w-full h-[200px] overflow-clip">
                     <Image
@@ -168,7 +168,7 @@ export default function page() {
             onSlideChange={() => console.log("slide change")}
           >
             {productdesign.map((course) => (
-              <SwiperSlide className="px-16 pb-16">
+              <SwiperSlide key={1} className="px-16 pb-16">
                 <div class="w-[400px] h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
                   <div className="w-full h-[200px] overflow-clip">
                     <Image
@@ -215,7 +215,7 @@ export default function page() {
             onSlideChange={() => console.log("slide change")}
           >
             {testimonials.map((testimonial) => (
-              <SwiperSlide className="rounded-2xl px-32 p-16 text-white">
+              <SwiperSlide key={1} className="rounded-2xl px-32 p-16 text-white">
                 <div>
                   <Image
                     src={fivestar}
@@ -234,6 +234,7 @@ export default function page() {
                           src={testimonial.image}
                           width={100}
                           height={300}
+                          alt="testimonial"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -272,7 +273,7 @@ export default function page() {
             onSlideChange={() => console.log("slide change")}
           >
             {backend.map((course) => (
-              <SwiperSlide className="px-16 pb-16 text">
+              <SwiperSlide key={1} className="px-16 pb-16 text">
                 <div class="w-[400px] h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
                   <div className="w-full h-[200px] overflow-clip">
                     <Image
@@ -323,7 +324,7 @@ export default function page() {
             onSlideChange={() => console.log("slide change")}
           >
             {dataanalysis.map((course) => (
-              <SwiperSlide className="px-16 pb-16 text">
+              <SwiperSlide key={1} className="px-16 pb-16 text">
                 <div class="w-[400px] h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
                   <div className="w-full h-[200px] overflow-clip">
                     <Image

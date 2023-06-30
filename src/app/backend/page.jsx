@@ -3,10 +3,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import backendhero from "../images/backendhero.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/bundle";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import backend from "../backend";
 import stars from "../images/fivestar.png";
 import dot from "../images/dot.png";
@@ -52,7 +48,7 @@ export default function page() {
         <div className="py-8 w-[1500px] mx-auto">
           <div>
             {backend.map((course) => (
-              <Link href={`/backend/${course.title}`}>
+              <Link key={1}>
                 <div className="p-8 bg-white mb-2">
                   <div className="grid grid-cols-3">
                     <div className="">

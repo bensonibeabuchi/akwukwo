@@ -25,7 +25,7 @@ export default function page() {
           onSlideChange={() => console.log("slide change")}
         >
           {testimonials.map((testimonial) => (
-            <SwiperSlide className="rounded-2xl bg-white p-16 mb-12 text-black">
+            <SwiperSlide key={1} className="rounded-2xl bg-white p-16 mb-12 text-black">
               <div>
                 <Image
                   src={fivestar}
@@ -43,6 +43,7 @@ export default function page() {
                         src={testimonial.image}
                         width={100}
                         height={300}
+                        alt="image"
                         className="w-full h-full object-cover"
                       />
                     </div>

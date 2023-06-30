@@ -25,7 +25,7 @@ export default function page() {
           onSlideChange={() => console.log("slide change")}
         >
           {courses.map((course) => (
-            <SwiperSlide className="p-8 bg-white">
+            <SwiperSlide key={1} className="p-8 bg-white">
               <div>
                 <div>
                   <Image

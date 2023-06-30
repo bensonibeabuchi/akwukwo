@@ -49,7 +49,7 @@ export default function page() {
       <div className="py-8 w-[1500px] mx-auto">
         <div>
           {dataanalysis.map((course) => (
-            <div className="p-8 bg-white mb-2">
+            <div key={1} className="p-8 bg-white mb-2">
               <div className="grid grid-cols-3">
                 <div className="">
                   <Image
