@@ -27,47 +27,45 @@ export default function page() {
         >
           {courses.map((course) => (
             <SwiperSlide key={course.id} className="p-8 bg-white">
-              <Link href={`/frontend/ ... /backend/${course.id}`}>
-                <div key={course.id}>
-                  <div>
-                    <Image
-                      src={course.image}
-                      alt="test"
-                      width={800}
-                      height={400}
-                      className="h-96 mx-auto object-none"
-                    />
-                  </div>
-                  <div className="space-y-1">
-                    <h3
-                      className="text-2xl pt-4 font-semibold truncate"
-                      title={course.title}
-                    >
-                      {course.title}
-                    </h3>
-                    <p
-                      className="text-lg truncate font-medium"
-                      title={course.description}
-                    >
-                      {course.description}
-                    </p>
-                    <p className="text-lg text-gray-300">
-                      By {course.instructor}
-                    </p>
-                    <div className="flex space-x-2 items-center">
-                      <p className="text-lg">{course.duration}</p>
-                      <div>
-                        <Image src={dot} width={5} height={100} alt="dot" />
-                      </div>
-                      <p className="text-lg">{course.level}</p>
-                    </div>
-                    <Image src={stars} width={100} height={200} alt="rating" />
-                    <h3 className="text-[#286f6b] text-3xl font-bold">
-                      {course.price}
-                    </h3>
-                  </div>
+              <div key={course.id}>
+                <div>
+                  <Image
+                    src={course.image}
+                    alt="test"
+                    width={800}
+                    height={400}
+                    className="h-96 mx-auto object-none"
+                  />
                 </div>
-              </Link>
+                <div className="space-y-1">
+                  <h3
+                    className="text-2xl pt-4 font-semibold truncate"
+                    title={course.title}
+                  >
+                    {course.title}
+                  </h3>
+                  <p
+                    className="text-lg truncate font-medium"
+                    title={course.description}
+                  >
+                    {course.description}
+                  </p>
+                  <p className="text-lg text-gray-300">
+                    By {course.instructor}
+                  </p>
+                  <div className="flex space-x-2 items-center">
+                    <p className="text-lg">{course.duration}</p>
+                    <div>
+                      <Image src={dot} width={5} height={100} alt="dot" />
+                    </div>
+                    <p className="text-lg">{course.level}</p>
+                  </div>
+                  <Image src={stars} width={100} height={200} alt="rating" />
+                  <h3 className="text-[#286f6b] text-3xl font-bold">
+                    {course.price}
+                  </h3>
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

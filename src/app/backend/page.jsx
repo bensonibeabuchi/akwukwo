@@ -6,7 +6,6 @@ import backendhero from "../images/backendhero.png";
 import backend from "../backend";
 import stars from "../images/fivestar.png";
 import dot from "../images/dot.png";
-import Faq from "../component/faq.jsx";
 
 export let backendCourses = [];
 
@@ -57,7 +56,9 @@ export default async function page() {
                     />
                   </div>
                   <div className="col-span-2 pl-8 space-y-3">
-                    <h3 className="text-4xl font-semibold hover:text-[#286f6b]">{course.title}</h3>
+                    <h3 className="text-4xl font-semibold hover:text-[#286f6b]">
+                      {course.title}
+                    </h3>
                     <p className="text-2xl font-medium">{course.description}</p>
                     <p className="text-lg text-gray-300">
                       By {course.instructor}
@@ -81,7 +82,6 @@ export default async function page() {
           </section>
         ))}
       </div>
-      <Faq />
     </div>
   );
 }

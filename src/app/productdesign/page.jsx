@@ -6,7 +6,6 @@ import productdesignhero from "../images/productdesignhero.png";
 import productdesign from "../productdesign";
 import stars from "../images/fivestar.png";
 import dot from "../images/dot.png";
-import Faq from "../component/faq.jsx";
 
 export let productdesignCourses = [];
 
@@ -96,7 +95,6 @@ export default function page() {
           ))}
         </div>
       </div>
-      <Faq />
     </div>
   );
 }

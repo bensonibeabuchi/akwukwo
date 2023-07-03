@@ -6,7 +6,6 @@ import dataanalysishero from "../images/dataanalysishero.png";
 import dataanalysis from "../dataanalysis";
 import stars from "../images/fivestar.png";
 import dot from "../images/dot.png";
-import Faq from "../component/faq.jsx";
 
 export let dataanalysisCourses = [];
 
@@ -63,7 +62,9 @@ export default function page() {
                       />
                     </div>
                     <div className="col-span-2 pl-8 space-y-3">
-                      <h3 className="text-4xl font-semibold hover:text-[#286f6b]">{course.title}</h3>
+                      <h3 className="text-4xl font-semibold hover:text-[#286f6b]">
+                        {course.title}
+                      </h3>
                       <p className="text-2xl font-medium">
                         {course.description}
                       </p>
@@ -95,7 +96,6 @@ export default function page() {
           ))}
         </div>
       </div>
-      <Faq />
     </div>
   );
 }

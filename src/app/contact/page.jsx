@@ -1,34 +1,52 @@
 import React from "react";
-import Coursecontent from "../component/Coursecontent";
-import Link from "next/link";
 
 export default function page() {
   return (
-    <div className="h-96 grid place-items-center mx-auto bg-red-500">
-      <h1>contact us here AGBA</h1>
+    <div>
+      <div className="w-[1500px] mx-auto p-16 pb-32 place-items-center">
+        <p className="mx-auto text-3xl font-semibold items-center text-center p-8">
+          Contact Us
+        </p>
+        <div className="flex flex-row mx-auto border-black w-[500px]">
+          <form
+            action="https://formspree.io/f/xeqbjnyj"
+            method="POST"
+            className=" flex flex-col w-96 mx-auto"
+          >
+            <label htmlFor="name" className="p-2">
+              Full Name
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="What's your full name?"
+                className="border w-full h-10 p-4"
+              />
+            </label>
 
-      <button className="p-8 relative flex justify-center items-center group">
-        <p>Dropdown</p>
-        <div className="hidden group-focus:block absolute bg-white top-full w-full mt-1 rounded ">
-          <button>
-            <Link href="/frontend"> Frontend</Link>
-          </button>
-          <ul>
-            <li>
-              <Link href="/backend"> backend</Link>
-            </li>
-            <li>
-              <Link href="/frontend"> Data</Link>
-            </li>
-            <li>
-              <Link href="/frontend"> Frontend</Link>
-            </li>
-            <li>
-              <Link href="/frontend"> product</Link>
-            </li>
-          </ul>
+            <label htmlFor="email" className="p-2">
+              Email address
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="you@example.com"
+                className="w-full border h-10 p-4"
+              />
+            </label>
+            <label htmlFor="message" className="p-2">
+              Message
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Write your message for the team here"
+                className="w-full h-44 border p-4 "
+              />
+            </label>
+            <button className=" p-4 text-xl my-4">Submit</button>
+          </form>
         </div>
-      </button>
+      </div>
     </div>
   );
 }

@@ -103,26 +103,27 @@ export default function Page({ params }) {
       </div>
       <div className="w-[1200px] mx-auto items-center p-8 pb-24">
         <h3 className="text-3xl my-8 font-bold">Course Content</h3>
-        {topics.map((topic, index) => {
+        {topics.map((topic) => {
           return (
-            <div key={topic.topic}>
+            <>
               <div className="flex justify-between text-2xl text-[#286f6b] hover:scale-[1.02] font-medium p-8 mb-2 rounded-xl bg-[#a9bab9]">
-                <div className="flex p-2 items-center space-x-4">
-                  <FaPlayCircle className="text-[#286f6b] text-3xl" />
-                  <div>
-                    <p
-                      onClick={() => setIsOpen((prev) => !prev)}
-                      className="hover:text-purple-600 hover:underline cursor-pointer"
-                    >
+                <Link
+                  href={topic.videoLink}
+                  target="_blank"
+                  className="visited:text-purple-600 w-4/5"
+                >
+                  <div className="flex items-center space-x-4">
+                    <FaPlayCircle className="text-[#286f6b] text-3xl" />
+                    <p className="hover:text-purple-600 hover:underline visited:text-gray-400 cursor-pointer">
                       {topic.topic}
                     </p>
                   </div>
-                </div>
+                </Link>
                 <div>
                   <p>{topic.duration}</p>
                 </div>
               </div>
-            </div>
+            </>
           );
         })}
       </div>
