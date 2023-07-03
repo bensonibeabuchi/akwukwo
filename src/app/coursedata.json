@@ -1,71 +1,239 @@
 [
   {
-    "title": "Advanced typography and design and illustration design.",
-    "description": "Master the essentials of HTML5, including semantic markup, forms, and multimedia integration.",
+    "id": "Node.js_Fundamentals",
+    "title": "Node.js Fundamentals",
+    "description": "Learn the basics of Node.js and build scalable server-side applications.",
     "instructor": "John Smith",
-    "duration": "4 weeks",
-    "level": "Beginner",
-    "price": "₦100,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-1.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
-  },
-  {
-    "title": "RESTful API Development with Express",
-    "description": "Master the concepts of building RESTful APIs using Express.js and create robust backend services for web applications.",
-    "instructor": "John Smith",
-    "duration": "10 weeks",
-    "level": "Intermediate",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-6.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true",
-    "price": "₦300,000"
-  },
-  {
-    "title": "Complete Web Design from Figma to Webflow to Freelancing",
-    "description": "3 in 1 Course: Learn to design websites with Figma, build with Webflow, and make a living freelancing.",
-    "instructor": "Vako Shvili",
-    "duration": "4 weeks",
-    "level": "Beginner",
-    "price": "₦350,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile9.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
-  },
-  {
-    "title": "Data Visualization with Tableau",
-    "description": "Explore the power of data visualization using Tableau and create compelling visual representations of data.",
-    "instructor": "Sarah Johnson",
     "duration": "8 weeks",
-    "level": "Intermediate",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-5.jpg?raw=true",
-    "price": "₦550,000"
+    "level": "Beginner",
+    "price": "₦110,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-14.jpg?raw=true",
+    "video": "https://youtu.be/zb3Qk8SG5Ms?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU",
+    "topics": [
+      {
+        "topic": "Node.js Crash Course Tutorial #2 - Node.js Basics",
+        "duration": "42:43",
+        "videoLink": "hhttps://youtu.be/OIBIXYLJjsI?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU"
+      },
+      {
+        "topic": "Node.js Crash Course Tutorial #3 - Clients & Servers",
+        "duration": "13:42",
+        "videoLink": "https://www.youtube.com/watch?v=-HPZ1leCV8k&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=3&pp=iAQB"
+      },
+      {
+        "topic": "Node.js Crash Course Tutorial #4 - Requests & Responses",
+        "duration": "26:53",
+        "videoLink": "https://youtu.be/DQD00NAUPNk?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU"
+      }
+    ]
   },
   {
+    "id": "Responsive_Web_Design",
     "title": "Responsive Web Design",
-    "description": "Create responsive and mobile-friendly websites using media queries and flexible layouts.",
-    "instructor": "Michael Brown",
-    "duration": "4 weeks",
-    "level": "Beginner",
-    "price": "₦99,999",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-7.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
-  },
-  {
-    "title": "Data Analysis with SQL",
-    "description": "Master SQL queries and use them to perform data analysis tasks on relational databases.",
-    "instructor": "David Thompson",
+    "description": "Learn how to create responsive and mobile-friendly websites using HTML, CSS, and JavaScript.",
+    "instructor": "John Smith",
     "duration": "8 weeks",
-    "level": "Intermediate",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-2.jpg?raw=true",
-    "price": "₦250,000"
+    "level": "Beginner",
+    "price": "₦90,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-10.jpg?raw=true",
+    "video": "https://youtu.be/3tLb3i7GB38?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw",
+    "topics": [
+      {
+        "topic": "Responsive Web Design Tutorial #2 - Responsive Website Example",
+        "duration": "05:11",
+        "videoLink": "https://youtu.be/MnjOcfL3agQ?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #3 - Intro to the Viewport",
+        "duration": "05:29",
+        "videoLink": "https://youtu.be/JANETBQZJ8E?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #4 - The Viewport Tag",
+        "duration": "05:05",
+        "videoLink": "https://youtu.be/ykgQosTbeSQ?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #5 - Media Queries",
+        "duration": "10:27",
+        "videoLink": "https://youtu.be/5xzaGSYd7jM?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #6 - Fluid Layouts",
+        "duration": "04:45",
+        "videoLink": "https://youtu.be/0gBnRll5XgA?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #7 - Tablet Styles",
+        "duration": "08:21",
+        "videoLink": "https://youtu.be/hS97LtBdM7I?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #8 - Mobile Styles",
+        "duration": "06:04",
+        "videoLink": "https://youtu.be/RRLDd1kaw3o?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #9 - Making a Mobile Drop-down Menu",
+        "duration": "10:43",
+        "videoLink": "https://youtu.be/FDh7Mdl2oww?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #10 - Responsive Images & Polyfills",
+        "duration": "09:58",
+        "videoLink": "https://youtu.be/LlSH8u0o1-A?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      }
+    ]
   },
   {
-    "title": "Frontend Frameworks: Vue.js",
-    "description": "Discover Vue.js, a progressive JavaScript framework for building scalable and interactive web applications.",
-    "instructor": "Daniel Lee",
+    "id": "Introduction_to_Data_Analysis",
+    "title": "Introduction to Data Analysis",
+    "description": "Learn the fundamentals of data analysis and gain insights from various datasets.",
+    "instructor": "John Smith",
+    "duration": "8 weeks",
+    "level": "Beginner",
+    "price": "₦50,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/dataanalysis/akwukwo_image-19.jpg?raw=true",
+    "video": "https://youtu.be/yZvFH7B6gKI",
+    "topics": [
+      {
+        "topic": "HTML",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/html_video"
+      },
+      {
+        "topic": "CSS",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/css_video"
+      },
+      {
+        "topic": "JavaScript",
+        "duration": "4 weeks",
+        "videoLink": "https://example.com/js_video"
+      }
+    ]
+  },
+  {
+    "id": "JavaScript_Fundamentals",
+    "title": "JavaScript Fundamentals",
+    "description": "Master the fundamental concepts of JavaScript programming language and build interactive web applications.",
+    "instructor": "Emily Johnson",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "price": "₦149,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-9.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile1.jpg?raw=true"
+    "price": "₦120,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-46.jpg?raw=true",
+    "video": "https://youtu.be/QISarFWdV94?list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW",
+    "topics": [
+      {
+        "topic": "Setting Up VS Code For JavaScript",
+        "duration": "8:27",
+        "videoLink": "https://www.youtube.com/watch?v=PigbqPGfIBk&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=2&pp=iAQB"
+      },
+      {
+        "topic": "Using the Console",
+        "duration": "8:12",
+        "videoLink": "https://www.youtube.com/watch?v=QY9G0UJNU8Q&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=3&pp=iAQB"
+      },
+      {
+        "topic": "Variables in Javascript",
+        "duration": "9:19",
+        "videoLink": "https://www.youtube.com/watch?v=CBPUpprXrIA&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=4&pp=iAQB"
+      },
+      {
+        "topic": "DataTypes in Javascript",
+        "duration": "10:23",
+        "videoLink": "https://www.youtube.com/watch?v=ztuGhf_TOz4&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=5&pp=iAQB"
+      },
+      {
+        "topic": "Type Conversion",
+        "duration": "11:01",
+        "videoLink": "https://www.youtube.com/watch?v=ztuGhf_TOz4&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=5&pp=iAQB"
+      }
+    ]
+  },
+  {
+    "id": "Frontend_Performance_Optimization",
+    "title": "Frontend Performance Optimization",
+    "description": "Optimize your frontend code for improved performance and user experience.",
+    "instructor": "Sarah Johnson",
+    "duration": "4 weeks",
+    "level": "Intermediate",
+    "price": "₦150,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-25.jpg?raw=true",
+    "video": "https://youtu.be/GNAENzKdciQ?list=PLAwxTw4SYaPmKmNX-INgcxQWf30KuWa_A",
+    "topics": [
+      {
+        "topic": "HTML",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/html_video"
+      },
+      {
+        "topic": "CSS",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/css_video"
+      },
+      {
+        "topic": "JavaScript",
+        "duration": "4 weeks",
+        "videoLink": "https://example.com/js_video"
+      }
+    ]
+  },
+  {
+    "id": "Advanced_Express",
+    "title": "Advanced Express",
+    "description": "Master advanced concepts of the Express framework and build robust backend APIs.",
+    "instructor": "Emily Johnson",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "price": "₦150,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-21.jpg?raw=true",
+    "video": "https://youtu.be/CLdkGgv9Miw?list=PLs1waz0ZKTGO7agN0cntpe6ro6TIka0ow",
+    "topics": [
+      {
+        "topic": "Building REST API Node JS",
+        "duration": "07:05",
+        "videoLink": "https://youtu.be/zmBvYYs718U?list=PLs1waz0ZKTGO7agN0cntpe6ro6TIka0ow"
+      },
+      {
+        "topic": "Create first Endpoint | Building REST API Node JS",
+        "duration": "07:59",
+        "videoLink": "https://youtu.be/cm0jNz-inkA?list=PLs1waz0ZKTGO7agN0cntpe6ro6TIka0ow"
+      },
+      {
+        "topic": "Register Endpoint | Building REST API Node JS",
+        "duration": "31:53",
+        "videoLink": "https://www.youtube.com/watch?v=cm0jNz-inkA&list=PLs1waz0ZKTGO7agN0cntpe6ro6TIka0ow&index=3&pp=iAQB"
+      }
+    ]
+  },
+  {
+    "id": "Databases_with_SQL",
+    "title": "Databases with SQL",
+    "description": "Learn how to design and manage databases using SQL.",
+    "instructor": "Michael Brown",
+    "duration": "10 weeks",
+    "level": "Intermediate",
+    "price": "₦180,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-18.jpg?raw=true",
+    "video": "https://youtu.be/323H_mOOWQ4?list=PLxCzCOWd7aiHqU4HKL7-SITyuSIcD93id",
+    "topics": [
+      {
+        "topic": "All Types of SQL Commands with Example | DDL, DML, DCL, TCL and CONSTRAINTS | DBMS",
+        "duration": "10:31",
+        "videoLink": "https://youtu.be/Axf1uckMt6g"
+      },
+      {
+        "topic": "ALTER Command (DDL) in SQL with Implementation on ORACLE",
+        "duration": "13:08",
+        "videoLink": "https://youtu.be/NA3b8JRUmww?list=PLxCzCOWd7aiHqU4HKL7-SITyuSIcD93id"
+      },
+      {
+        "topic": "SQL Queries and Subqueries (part-1) | Database Management System",
+        "duration": "31:53",
+        "videoLink": "https://youtu.be/_yog7h4BokQ?list=PLxCzCOWd7aiHqU4HKL7-SITyuSIcD93id"
+      }
+    ]
   },
   {
     "title": "User Research and Analysis",
@@ -87,32 +255,74 @@
     "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile3.jpg?raw=true"
   },
   {
-    "title": "Frontend Performance Optimization",
-    "description": "Optimize website performance through techniques like minification, caching, and image optimization.",
-    "instructor": "Jennifer Smith",
-    "duration": "4 weeks",
-    "level": "Advanced",
-    "price": "₦199,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-6.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile5.jpg?raw=true"
+    "id": "MongoDB_Essentials",
+    "title": "MongoDB Essentials",
+    "description": "Get started with MongoDB and learn how to work with NoSQL databases.",
+    "instructor": "Robert Davis",
+    "duration": "8 weeks",
+    "level": "Beginner",
+    "price": "₦250,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-9.jpg?raw=true",
+    "video": "https://youtu.be/ExcRbA7fy_A?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA",
+    "topics": [
+      {
+        "topic": "Installing MongoDB",
+        "duration": "04:28",
+        "videoLink": "https://youtu.be/gDOKSgqM-bQ?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      },
+      {
+        "topic": "Collections & Documents",
+        "duration": "03:38",
+        "videoLink": "https://youtu.be/ojKJqNQYaOI?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      },
+      {
+        "topic": "Using MongoDB Compass",
+        "duration": "10:28",
+        "videoLink": "https://youtu.be/bJSj1a84I20?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      },
+      {
+        "topic": "Using the MongoDB Shell",
+        "duration": "06:17",
+        "videoLink": "https://youtu.be/jR49YGYXdxc?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      },
+      {
+        "topic": "Adding New Documents",
+        "duration": "07:15",
+        "videoLink": "https://youtu.be/g3Z0Av9yRSs?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      }
+    ]
   },
   {
+    "id": "Authentication_and_Authorization",
     "title": "Authentication and Authorization",
-    "description": "Explore different authentication and authorization techniques to secure backend APIs and protect user data.",
-    "instructor": "Michael Brown",
+    "description": "Learn how to implement secure authentication and authorization mechanisms in your applications.",
+    "instructor": "Julia Adams",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-4.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile4.jpg?raw=true",
-    "price": "₦300,000"
-  },
-  {
-    "title": "JavaScript for Frontend Development",
-    "description": "Unlock the power of JavaScript and learn to create interactive and dynamic web applications.",
-    "instructor": "John Smith",
-    "duration": "8 weeks",
-    "level": "Intermediate",
-    "price": "₦100,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/images%20for%20capstone%20project/akwukwo_image-1.jpg?raw=true"
+    "price": "₦300,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-24.jpg?raw=true",
+    "video": "https://youtu.be/brcHK3P6ChQ?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd",
+    "topics": [
+      {
+        "topic": "React User Login and Authentication with Axios",
+        "duration": "31:36",
+        "videoLink": "https://youtu.be/X3qyxo_UTR4?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd"
+      },
+      {
+        "topic": "React Protected Routes | Role-Based Authorization | React Router v6",
+        "duration": "30:42",
+        "videoLink": "https://youtu.be/oUZjO00NkhY?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd"
+      },
+      {
+        "topic": "React Login Authentication with JWT Access, Refresh Tokens, Cookies and Axios",
+        "duration": "41:00",
+        "videoLink": "https://youtu.be/nI8PYZNFtac?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd"
+      },
+      {
+        "topic": "React Persistent User Login Authentication with JWT Tokens",
+        "duration": "37:26",
+        "videoLink": "https://youtu.be/27KeYk-5vJw?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd"
+      }
+    ]
   }
 ]

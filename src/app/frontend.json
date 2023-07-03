@@ -1,128 +1,354 @@
 [
   {
-    "title": "HTML5 and CSS Fundamentals",
-    "description": "Master the essentials of HTML5 and CSS to build beautiful and responsive web pages.",
-    "instructor": "Emily Davis",
-    "duration": "6 weeks",
-    "level": "Beginner",
-    "price": "₦100,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-1.jpg?raw=true"
+    "id": "React.js_Development",
+    "title": "React.js Development",
+    "description": "Learn how to build modern and dynamic user interfaces using React.js library.",
+    "instructor": "Francis Enemuo",
+    "duration": "10 weeks",
+    "level": "Advanced",
+    "price": "₦200,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-15.jpg?raw=true",
+    "video": "https://www.youtube.com/embed/bLq_txDDIys",
+    "topics": [
+      {
+        "topic": "Components Structure and Routing in Next JS",
+        "duration": "30:02",
+        "videoLink": "https://www.youtube.com/embed/Axf1uckMt6g"
+      },
+      {
+        "topic": "Fetch APIs in NEXT JS",
+        "duration": "40:02",
+        "videoLink": "https://youtu.be/inzQ_Ph6nsg"
+      },
+      {
+        "topic": "Dynamic Routing in Next JS",
+        "duration": "31:53",
+        "videoLink": "https://youtu.be/7Fjj2qnEcWA"
+      },
+      {
+        "topic": "Create a READ MORE button using Hook in Next JS",
+        "duration": "12:54",
+        "videoLink": "https://youtu.be/4mtXa9-q0AQ"
+      },
+      {
+        "topic": "Usestate Hook Simple Application",
+        "duration": "17:35",
+        "videoLink": "https://youtu.be/IjsX00YklSQ"
+      },
+      {
+        "topic": "Host a React app on Netlify",
+        "duration": "9:0",
+        "videoLink": "https://youtu.be/MTgTNdxBBl0"
+      },
+      {
+        "topic": "Build a TODO App in JavaScript and TailwindCSS",
+        "duration": "1:02:40",
+        "videoLink": "https://youtu.be/FAj69UyPPIM"
+      }
+    ]
   },
   {
-    "title": "JavaScript for Frontend Development",
-    "description": "Unlock the power of JavaScript and learn to create interactive and dynamic web applications.",
+    "id": "Responsive_Web_Design",
+    "title": "Responsive Web Design",
+    "description": "Learn how to create responsive and mobile-friendly websites using HTML, CSS, and JavaScript.",
     "instructor": "John Smith",
     "duration": "8 weeks",
-    "level": "Intermediate",
-    "price": "₦100,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-10.jpg?raw=true"
+    "level": "Beginner",
+    "price": "₦90,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-10.jpg?raw=true",
+    "video": "https://youtu.be/3tLb3i7GB38?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw",
+    "topics": [
+      {
+        "topic": "Responsive Web Design Tutorial #2 - Responsive Website Example",
+        "duration": "05:11",
+        "videoLink": "https://youtu.be/MnjOcfL3agQ?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #3 - Intro to the Viewport",
+        "duration": "05:29",
+        "videoLink": "https://youtu.be/JANETBQZJ8E?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #4 - The Viewport Tag",
+        "duration": "05:05",
+        "videoLink": "https://youtu.be/ykgQosTbeSQ?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #5 - Media Queries",
+        "duration": "10:27",
+        "videoLink": "https://youtu.be/5xzaGSYd7jM?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #6 - Fluid Layouts",
+        "duration": "04:45",
+        "videoLink": "https://youtu.be/0gBnRll5XgA?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #7 - Tablet Styles",
+        "duration": "08:21",
+        "videoLink": "https://youtu.be/hS97LtBdM7I?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #8 - Mobile Styles",
+        "duration": "06:04",
+        "videoLink": "https://youtu.be/RRLDd1kaw3o?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #9 - Making a Mobile Drop-down Menu",
+        "duration": "10:43",
+        "videoLink": "https://youtu.be/FDh7Mdl2oww?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      },
+      {
+        "topic": "Responsive Web Design Tutorial #10 - Responsive Images & Polyfills",
+        "duration": "09:58",
+        "videoLink": "https://youtu.be/LlSH8u0o1-A?list=PL4cUxeGkcC9g9Vh9MAA-XKnfJsWZnPZFw"
+      }
+    ]
   },
   {
-    "title": "Responsive Web Design",
-    "description": "Design and develop websites that seamlessly adapt to different screen sizes and devices.",
-    "instructor": "Sarah Johnson",
+    "id": "JavaScript_Fundamentals",
+    "title": "JavaScript Fundamentals",
+    "description": "Master the fundamental concepts of JavaScript programming language and build interactive web applications.",
+    "instructor": "Emily Johnson",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "price": "₦100,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-11.jpg?raw=true"
+    "price": "₦120,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-46.jpg?raw=true",
+    "video": "https://youtu.be/QISarFWdV94?list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW",
+    "topics": [
+      {
+        "topic": "Setting Up VS Code For JavaScript",
+        "duration": "8:27",
+        "videoLink": "https://www.youtube.com/watch?v=PigbqPGfIBk&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=2&pp=iAQB"
+      },
+      {
+        "topic": "Using the Console",
+        "duration": "8:12",
+        "videoLink": "https://www.youtube.com/watch?v=QY9G0UJNU8Q&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=3&pp=iAQB"
+      },
+      {
+        "topic": "Variables in Javascript",
+        "duration": "9:19",
+        "videoLink": "https://www.youtube.com/watch?v=CBPUpprXrIA&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=4&pp=iAQB"
+      },
+      {
+        "topic": "DataTypes in Javascript",
+        "duration": "10:23",
+        "videoLink": "https://www.youtube.com/watch?v=ztuGhf_TOz4&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=5&pp=iAQB"
+      },
+      {
+        "topic": "Type Conversion",
+        "duration": "11:01",
+        "videoLink": "https://www.youtube.com/watch?v=ztuGhf_TOz4&list=PLFHz2csJcgk_05eXbkFNlJbA6fksXohDW&index=5&pp=iAQB"
+      }
+    ]
   },
   {
-    "title": "Frontend Frameworks: React",
-    "description": "Explore the popular React framework and build modern and scalable web applications.",
+    "id": "Frontend_Performance_Optimization",
+    "title": "Frontend Performance Optimization",
+    "description": "Optimize your frontend code for improved performance and user experience.",
+    "instructor": "Sarah Johnson",
+    "duration": "4 weeks",
+    "level": "Intermediate",
+    "price": "₦150,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-25.jpg?raw=true",
+    "video": "https://youtu.be/GNAENzKdciQ?list=PLAwxTw4SYaPmKmNX-INgcxQWf30KuWa_A",
+    "topics": [
+      {
+        "topic": "HTML",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/html_video"
+      },
+      {
+        "topic": "CSS",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/css_video"
+      },
+      {
+        "topic": "JavaScript",
+        "duration": "4 weeks",
+        "videoLink": "https://example.com/js_video"
+      }
+    ]
+  },
+  {
+    "id": "CSS_Grid_Layout",
+    "title": "CSS Grid Layout",
+    "description": "Master the CSS Grid layout and create complex responsive designs with ease.",
+    "instructor": "David Wilson",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "price": "₦120,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-16.jpg?raw=true",
+    "video": "https://youtu.be/xPuYbmmPdEM?list=PL4cUxeGkcC9hk02lFb6EkdXF2DYGl4Gg4",
+    "topics": [
+      {
+        "topic": "HTML",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/html_video"
+      },
+      {
+        "topic": "CSS",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/css_video"
+      },
+      {
+        "topic": "JavaScript",
+        "duration": "4 weeks",
+        "videoLink": "https://example.com/js_video"
+      }
+    ]
+  },
+  {
+    "id": "Advanced_JavaScript_Techniques",
+    "title": "Advanced JavaScript Techniques",
+    "description": "Explore advanced concepts and techniques in JavaScript programming.",
+    "instructor": "Alex Turner",
+    "duration": "8 weeks",
+    "level": "Advanced",
+    "price": "₦250,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-17.jpg?raw=true",
+    "video": "https://youtu.be/1S8SBDhA7HA?list=PL0Zuz27SZ-6N3bG4YZhkrCL3ZmDcLTuGd",
+    "topics": [
+      {
+        "topic": "HTML",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/html_video"
+      },
+      {
+        "topic": "CSS",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/css_video"
+      },
+      {
+        "topic": "JavaScript",
+        "duration": "4 weeks",
+        "videoLink": "https://example.com/js_video"
+      }
+    ]
+  },
+  {
+    "id": "Vue.js_Development",
+    "title": "Vue.js Development",
+    "description": "Learn how to build interactive web applications using the Vue.js framework.",
+    "instructor": "Jessica Williams",
+    "duration": "10 weeks",
+    "level": "Intermediate",
+    "price": "₦180,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-10.jpg?raw=true",
+    "video": "https://youtu.be/YrxBCBibVo0?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1",
+    "topics": [
+      {
+        "topic": "HTML",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/html_video"
+      },
+      {
+        "topic": "CSS",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/css_video"
+      },
+      {
+        "topic": "JavaScript",
+        "duration": "4 weeks",
+        "videoLink": "https://example.com/js_video"
+      }
+    ]
+  },
+  {
+    "id": "React_Native_Development",
+    "title": "React Native Development",
+    "description": "Learn how to build cross-platform mobile applications using React Native framework.",
     "instructor": "Michael Brown",
     "duration": "10 weeks",
     "level": "Advanced",
-    "price": "₦100,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-15.jpg?raw=true"
-  },
-  {
-    "title": "CSS3 Animation and Transitions",
-    "description": "Learn to create stunning animations and transitions using CSS3 for a visually captivating user experience.",
-    "instructor": "Sophia Martinez",
-    "duration": "6 weeks",
-    "level": "Intermediate",
-    "price": "₦100,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-16.jpg?raw=true"
-  },
-  {
-    "title": "Frontend Frameworks: React",
-    "description": "Learn React, a popular JavaScript library for building dynamic and reusable user interfaces.",
-    "instructor": "Laura Wilson",
-    "duration": "8 weeks",
-    "level": "Advanced",
-    "price": "₦300,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-17.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile16.jpg?raw=true"
-  },
-  {
-    "title": "CSS3 Styling Techniques",
-    "description": "Learn advanced CSS3 styling techniques, including flexbox, grid layouts, and responsive design.",
-    "instructor": "Sarah Johnson",
-    "duration": "6 weeks",
-    "level": "Intermediate",
-    "price": "₦200,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-25.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
-  },
-  {
-    "title": "JavaScript for Frontend Development",
-    "description": "Build interactive and dynamic web pages using JavaScript, covering DOM manipulation and event handling.",
-    "instructor": "David Thompson",
-    "duration": "8 weeks",
-    "level": "Intermediate",
     "price": "₦350,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-46.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
-  },
-  {
-    "title": "Responsive Web Design",
-    "description": "Create responsive and mobile-friendly websites using media queries and flexible layouts.",
-    "instructor": "Michael Brown",
-    "duration": "4 weeks",
-    "level": "Beginner",
-    "price": "₦149,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-5.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile15.jpg?raw=true"
-  },
-
-  {
-    "title": "Frontend Frameworks: Vue.js",
-    "description": "Discover Vue.js, a progressive JavaScript framework for building scalable and interactive web applications.",
-    "instructor": "Daniel Lee",
-    "duration": "6 weeks",
-    "level": "Intermediate",
-    "price": "₦99,999",
     "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-1.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile1.jpg?raw=true"
+    "video": "https://youtu.be/ur6I5m2nTvk?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ",
+    "topics": [
+      {
+        "topic": "Components Structure and Routing in Next JS",
+        "duration": "30:02",
+        "videoLink": "https://youtu.be/Axf1uckMt6g"
+      },
+      {
+        "topic": "Fetch APIs in NEXT JS",
+        "duration": "40:02",
+        "videoLink": "https://youtu.be/inzQ_Ph6nsg"
+      },
+      {
+        "topic": "Dynamic Routing in Next JS",
+        "duration": "31:53",
+        "videoLink": "https://youtu.be/7Fjj2qnEcWA"
+      },
+      {
+        "topic": "Create a READ MORE button using Hook in Next JS",
+        "duration": "12:54",
+        "videoLink": "https://youtu.be/4mtXa9-q0AQ"
+      },
+      {
+        "topic": "Usestate Hook Simple Application",
+        "duration": "17:35",
+        "videoLink": "https://youtu.be/IjsX00YklSQ"
+      },
+      {
+        "topic": "Host a React app on Netlify",
+        "duration": "9:0",
+        "videoLink": "https://youtu.be/MTgTNdxBBl0"
+      },
+      {
+        "topic": "Build a TODO App in JavaScript and TailwindCSS",
+        "duration": "1:02:40",
+        "videoLink": "https://youtu.be/FAj69UyPPIM"
+      }
+    ]
   },
   {
-    "title": "Web Accessibility",
-    "description": "Learn how to create inclusive and accessible web experiences, covering WCAG guidelines and assistive technologies.",
-    "instructor": "Alex Johnson",
+    "id": "Sass_Stylesheet",
+    "title": "Sass Stylesheet",
+    "description": "Discover the power of Sass and streamline your CSS development process.",
+    "instructor": "Sarah Johnson",
     "duration": "4 weeks",
     "level": "Intermediate",
-    "price": "₦129,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-10.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile3.jpg?raw=true"
-  },
-  {
-    "title": "Frontend Performance Optimization",
-    "description": "Optimize website performance through techniques like minification, caching, and image optimization.",
-    "instructor": "Jennifer Smith",
-    "duration": "4 weeks",
-    "level": "Advanced",
-    "price": "₦199,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-11.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile5.jpg?raw=true"
-  },
-  {
-    "title": "Frontend Frameworks: Vue.js",
-    "description": "Discover Vue.js, a progressive JavaScript framework for building scalable and interactive web applications.",
-    "instructor": "Daniel Lee",
-    "duration": "6 weeks",
-    "level": "Intermediate",
-    "price": "₦149,000",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-15.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true"
+    "price": "₦180,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/frontend/akwukwo_image-5.jpg?raw=true",
+    "video": "https://youtu.be/_kqN4hl9bGc?list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb",
+    "topics": [
+      {
+        "topic": "Components Structure and Routing in Next JS",
+        "duration": "30:02",
+        "videoLink": "https://youtu.be/Axf1uckMt6g"
+      },
+      {
+        "topic": "Fetch APIs in NEXT JS",
+        "duration": "40:02",
+        "videoLink": "https://youtu.be/inzQ_Ph6nsg"
+      },
+      {
+        "topic": "Dynamic Routing in Next JS",
+        "duration": "31:53",
+        "videoLink": "https://youtu.be/7Fjj2qnEcWA"
+      },
+      {
+        "topic": "Create a READ MORE button using Hook in Next JS",
+        "duration": "12:54",
+        "videoLink": "https://youtu.be/4mtXa9-q0AQ"
+      },
+      {
+        "topic": "Usestate Hook Simple Application",
+        "duration": "17:35",
+        "videoLink": "https://youtu.be/IjsX00YklSQ"
+      },
+      {
+        "topic": "Host a React app on Netlify",
+        "duration": "9:0",
+        "videoLink": "https://youtu.be/MTgTNdxBBl0"
+      },
+      {
+        "topic": "Build a TODO App in JavaScript and TailwindCSS",
+        "duration": "1:02:40",
+        "videoLink": "https://youtu.be/FAj69UyPPIM"
+      }
+    ]
   }
 ]

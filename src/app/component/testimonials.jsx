@@ -20,7 +20,7 @@ export default function page() {
           spaceBetween={100}
           slidesPerView={2}
           pagination={{ clickable: true }}
-          autoplay
+          // autoplay
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >

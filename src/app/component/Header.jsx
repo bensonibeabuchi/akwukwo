@@ -6,8 +6,8 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <div className="bg-[#286f6b]">
-      <div className="w-[1500px] mx-auto text-xl">
+    <div className="bg-[#286f6b] w-full">
+      <div className="md:w-[1500px]  mx-auto text-xl">
         <nav className="flex justify-between p-8 items-center">
           <div className="flex space-x-12">
             <Link href="/" className="hover:text-[#fcdc66]">
@@ -20,11 +20,6 @@ export default function Header() {
             </Link>
 
             <ul className="flex space-x-8 items-center text-white font-medium">
-              {/* <li>
-                <Link href="/" className="hover:text-[#fcdc66]">
-                  Home
-                </Link>
-              </li> */}
               <li>
                 <Link href="./courses" className="hover:text-[#fcdc66]">
                   Courses

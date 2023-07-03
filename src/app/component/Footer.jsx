@@ -79,7 +79,6 @@ export default function footer() {
               </Link>
             </li>
             <li>
-              {" "}
               <Link
                 href="https://twitter.com/BensonIbeabuchi"
                 target="_blank"
@@ -92,19 +91,17 @@ export default function footer() {
         </div>
         <div className="space-y-4">
           <h3 className=" font-medium text-2xl">Subscribe to our newsletter</h3>
-          <p className="text-lg">
-            We built Nomod for businesses of all shapes and sizes. Whether
-            handle
-          </p>
           <div className="flex h-16 text-center">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email"
-              className="p-4"
-            />
-            <button className="rounded-none p-4">Subscribe</button>
+            <form action="https://formspree.io/f/xeqbjnyj" method="POST">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                className="p-4 text-black"
+              />
+              <button className="rounded-none p-4">Subscribe</button>
+            </form>
           </div>
         </div>
       </div>

@@ -1,221 +1,163 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import "swiper/css/bundle";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import frontend from "../frontend";
 import backend from "../backend";
 import productdesign from "../productdesign";
 import testimonials from "../testimonial";
 import dataanalysis from "../dataanalysis";
 import Image from "next/image";
-
-import dot from "../images/dot.png";
 import fivestar from "../images/fivestar.png";
 import { FaQuoteRight } from "react-icons/fa";
 import Link from "next/link";
+import Randomslide from "../component/Randomslide";
+import SlideNavButtons from "./SlideNavButtons";
+import SwiperCore from "swiper/core";
 
-function getRandomItems() {
-  // Load the JSON files
-  const frontend = require("../frontend.json");
-  const productdesign = require("../productdesign.json");
-  const backend = require("../coursedata.json");
-  const courses = require("../coursedata.json");
-  const dataanalysis = require("../dataanalysis.json");
+SwiperCore.use([Navigation]);
 
-  // Combine the courses from different JSON files
-  const allCourses = [
-    ...frontend,
-    ...courses,
-    ...backend,
-    ...dataanalysis,
-    ...productdesign,
-  ];
-
-  // Select 5 random items from the combined courses
-  const randomItems = [];
-  while (randomItems.length < 5) {
-    const randomIndex = Math.floor(Math.random() * allCourses.length);
-    const randomCourse = allCourses[randomIndex];
-    randomItems.push(randomCourse);
-  }
-
-  return randomItems;
-}
-
-export default function page() {
+export default function Page() {
   return (
     <div className="py-16">
       <div className="py-8 w-[1400px] mx-auto">
         <h3 className="text-2xl font-semibold p-4">Featured course</h3>
         <div>
-          <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={50}
-            slidesPerView={1}
-            // navigation
-            pagination={{ clickable: true }}
-            autoplay
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-          >
-            {getRandomItems().map((course) => (
-              <SwiperSlide key={1} className="p-8 mb-12 bg-white rounded-xl">
-                <div className="grid grid-cols-3">
-                  <div className="">
-                    <Image
-                      src={course.image}
-                      alt="test"
-                      width={800}
-                      height={400}
-                      className="h-96 mx-auto object-none"
-                    />
-                  </div>
-                  <div className="col-span-2 pl-8 space-y-2">
-                    <h3 className="text-4xl font-semibold">{course.title}</h3>
-                    <p className="text-2xl font-medium">{course.description}</p>
-                    <p className="text-lg text-gray-300">
-                      By {course.instructor}
-                    </p>
-                    <div className="flex space-x-2 items-center">
-                      <p className="text-lg">{course.duration}</p>
-                      <div>
-                        <Image src={dot} width={5} height={100} alt="dot" />
-                      </div>
-                      <p className="text-lg">{course.level}</p>
-                    </div>
-                    <Image
-                      src={fivestar}
-                      width={200}
-                      height={200}
-                      alt="rating"
-                    />
-                    <h2 className="text-[#286f6b]">{course.price}</h2>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <Randomslide />
         </div>
       </div>
       <div className="py-8 w-[1400px] mx-auto">
-        <h3 className="text-2xl font-semibold p-4">
-          <Link href="/frontend" className="hover:text-[#286f6b]">
-            Frontend Developement
-          </Link>
-        </h3>
+        <Link href="/frontend" className="hover:text-[#286f6b]">
+          <h3 className="text-2xl font-semibold p-4">Frontend Development</h3>
+        </Link>
+
         <div>
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={1}
+            spaceBetween={0}
             slidesPerView={3}
-            navigation
+            navigation={false}
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
             {frontend.map((course) => (
-              <SwiperSlide key={1} className="px-16 pb-16">
-                <div class="w-[400px] h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
-                  <div className="w-full h-[200px] overflow-clip">
-                    <Image
-                      src={course.image}
-                      width={500}
-                      height={800}
-                      alt="frontend"
-                    />
-                  </div>
+              <div key={course.id}>
+                <SwiperSlide key={course.id} className="px-8 py-16  ">
+                  <Link href={`/frontend/${course.id}`}>
+                    <div class="w-[400px] mx-auto h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
+                      <div className="w-full h-[200px] overflow-clip">
+                        <Image
+                          src={course.image}
+                          width={500}
+                          height={800}
+                          alt="frontend"
+                        />
+                      </div>
 
-                  <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
-                    <div
-                      className="w-full text-black text-[24px] truncate font-bold"
-                      title={course.title}
-                    >
-                      {course.title}
+                      <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+                        <div
+                          className="w-full text-black text-[24px] truncate font-bold"
+                          title={course.title}
+                        >
+                          {course.title}
+                        </div>
+                        <div class="text-stone-300 text-[14px] font-medium">
+                          {course.instructor}
+                        </div>
+                        <div class="w-full text-black text-[16px] font-normal">
+                          {course.description}
+                        </div>
+                        <div class="text-teal-700 text-[20px] font-bold">
+                          {course.price}
+                        </div>
+                      </div>
                     </div>
-                    <div class="text-stone-300 text-[14px] font-medium">
-                      {course.instructor}
-                    </div>
-                    <div class="w-full text-black text-[16px] font-normal">
-                      {course.description}
-                    </div>
-                    <div class="text-teal-700 text-[20px] font-bold">
-                      {course.price}
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+                  </Link>
+                </SwiperSlide>
+              </div>
             ))}
+            <div className=" absolute top-52 z-50">
+              <SlideNavButtons />
+            </div>
           </Swiper>
         </div>
       </div>
 
       <div className="py-8 w-[1400px] mx-auto">
-        <h3 className="text-2xl font-semibold p-4">
-          <Link href="/productdesign" className="hover:text-[#286f6b]">
-            Product Design
-          </Link>
-        </h3>
+        <Link href="/productdesign" className="hover:text-[#286f6b]">
+          <h3 className="text-2xl font-semibold p-4">Product Design</h3>
+        </Link>
+
         <div>
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={1}
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={0}
             slidesPerView={3}
-            navigation
+            navigation={false}
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
             {productdesign.map((course) => (
-              <SwiperSlide key={1} className="px-16 pb-16">
-                <div class="w-[400px] h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
-                  <div className="w-full h-[200px] overflow-clip">
-                    <Image
-                      src={course.image}
-                      width={500}
-                      height={800}
-                      alt="frontend"
-                    />
-                  </div>
+              <div key={course.id}>
+                <SwiperSlide key={course.id} className="px-8 py-16  ">
+                  <Link href={`/frontend/${course.id}`}>
+                    <div class="w-[400px] mx-auto h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
+                      <div className="w-full h-[200px] overflow-clip">
+                        <Image
+                          src={course.image}
+                          width={500}
+                          height={800}
+                          alt="frontend"
+                        />
+                      </div>
 
-                  <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
-                    <div
-                      className="w-full text-black text-[24px] truncate font-bold"
-                      title={course.title}
-                    >
-                      {course.title}
+                      <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+                        <div
+                          className="w-full text-black text-[24px] truncate font-bold"
+                          title={course.title}
+                        >
+                          {course.title}
+                        </div>
+                        <div class="text-stone-300 text-[14px] font-medium">
+                          {course.instructor}
+                        </div>
+                        <div class="w-full text-black text-[16px] font-normal">
+                          {course.description}
+                        </div>
+                        <div class="text-teal-700 text-[20px] font-bold">
+                          {course.price}
+                        </div>
+                      </div>
                     </div>
-                    <div class="text-stone-300 text-[14px] font-medium">
-                      {course.instructor}
-                    </div>
-                    <div class="w-full text-black text-[16px] font-normal">
-                      {course.description}
-                    </div>
-                    <div class="text-teal-700 text-[20px] font-bold">
-                      {course.price}
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+                  </Link>
+                </SwiperSlide>
+              </div>
             ))}
+            <div className=" absolute top-52 z-50">
+              <SlideNavButtons />
+            </div>
           </Swiper>
         </div>
       </div>
       <div className="bg-[#12524f]">
-        <div className="px-48 w-[1400px] mx-auto text-white">
+        <div className="px-48 w-[1500px] mx-auto text-white">
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={1}
             slidesPerView={1}
-            navigation
+            navigation={false}
+            pagination={{ clickable: true }}
             autoplay
-            // pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
             {testimonials.map((testimonial) => (
-              <SwiperSlide key={1} className="rounded-2xl px-32 p-16 text-white">
+              <SwiperSlide
+                key={1}
+                className="rounded-2xl px-32 p-16 text-white"
+              >
                 <div>
                   <Image
                     src={fivestar}
@@ -252,109 +194,124 @@ export default function page() {
                 </div>
               </SwiperSlide>
             ))}
+            {/* <div className="absolute  scale-[0.74] right-0 pl-16 p-4 top-32 z-50">
+              <SlideNavButtons />
+            </div> */}
           </Swiper>
         </div>
       </div>
 
       <div className="py-8 w-[1400px] mx-auto">
-        <h3 className="text-2xl font-semibold p-4">
-          <Link href="/backend" className="hover:text-[#286f6b]">
-            Backend Developement
-          </Link>
-        </h3>
+        <Link href="/backend" className="hover:text-[#286f6b]">
+          <h3 className="text-2xl font-semibold p-4">Backend Development</h3>
+        </Link>
+
         <div>
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={1}
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={0}
             slidesPerView={3}
-            navigation
+            navigation={false}
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
             {backend.map((course) => (
-              <SwiperSlide key={1} className="px-16 pb-16 text">
-                <div class="w-[400px] h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
-                  <div className="w-full h-[200px] overflow-clip">
-                    <Image
-                      src={course.image}
-                      width={500}
-                      height={800}
-                      alt="frontend"
-                    />
-                  </div>
+              <div key={course.id}>
+                <SwiperSlide key={course.id} className="px-8 py-16  ">
+                  <Link href={`/backend/${course.id}`}>
+                    <div class="w-[400px] mx-auto h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
+                      <div className="w-full h-[200px] overflow-clip">
+                        <Image
+                          src={course.image}
+                          width={500}
+                          height={800}
+                          alt="frontend"
+                        />
+                      </div>
 
-                  <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
-                    <div
-                      className="w-full text-black text-[24px] truncate font-bold"
-                      title={course.title}
-                    >
-                      {course.title}
+                      <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+                        <div
+                          className="w-full text-black text-[24px] truncate font-bold"
+                          title={course.title}
+                        >
+                          {course.title}
+                        </div>
+                        <div class="text-stone-300 text-[14px] font-medium">
+                          {course.instructor}
+                        </div>
+                        <div class="w-full text-black text-[16px] font-normal">
+                          {course.description}
+                        </div>
+                        <div class="text-teal-700 text-[20px] font-bold">
+                          {course.price}
+                        </div>
+                      </div>
                     </div>
-                    <div class="text-stone-300 text-[14px] font-medium">
-                      {course.instructor}
-                    </div>
-                    <div class="w-full text-black text-[16px] font-normal">
-                      {course.description}
-                    </div>
-                    <div class="text-teal-700 text-[20px] font-bold">
-                      {course.price}
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+                  </Link>
+                </SwiperSlide>
+              </div>
             ))}
+            <div className=" absolute top-52 z-50">
+              <SlideNavButtons />
+            </div>
           </Swiper>
         </div>
       </div>
       <div className="py-8 w-[1400px] mx-auto">
-        <h3 className="text-2xl font-semibold p-4">
-          <Link href="/dataanalysis" className="hover:text-[#286f6b]">
-            Data Analysis
-          </Link>
-        </h3>
+        <Link href="/dataanalysis" className="hover:text-[#286f6b]">
+          <h3 className="text-2xl font-semibold p-4">Data Analysis</h3>
+        </Link>
+
         <div>
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-            spaceBetween={1}
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={0}
             slidesPerView={3}
-            navigation
+            navigation={false}
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
           >
             {dataanalysis.map((course) => (
-              <SwiperSlide key={1} className="px-16 pb-16 text">
-                <div class="w-[400px] h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
-                  <div className="w-full h-[200px] overflow-clip">
-                    <Image
-                      src={course.image}
-                      width={500}
-                      height={800}
-                      alt="frontend"
-                    />
-                  </div>
+              <div key={course.id}>
+                <SwiperSlide key={course.id} className="px-8 py-16  ">
+                  <Link href={`/dataanalysis/${course.id}`}>
+                    <div class="w-[400px] mx-auto h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
+                      <div className="w-full h-[200px] overflow-clip">
+                        <Image
+                          src={course.image}
+                          width={500}
+                          height={800}
+                          alt="frontend"
+                        />
+                      </div>
 
-                  <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
-                    <div
-                      className="w-full text-black text-[24px] truncate font-bold"
-                      title={course.title}
-                    >
-                      {course.title}
+                      <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+                        <div
+                          className="w-full text-black text-[24px] truncate font-bold"
+                          title={course.title}
+                        >
+                          {course.title}
+                        </div>
+                        <div class="text-stone-300 text-[14px] font-medium">
+                          {course.instructor}
+                        </div>
+                        <div class="w-full text-black text-[16px] font-normal">
+                          {course.description}
+                        </div>
+                        <div class="text-teal-700 text-[20px] font-bold">
+                          {course.price}
+                        </div>
+                      </div>
                     </div>
-                    <div class="text-stone-300 text-[14px] font-medium">
-                      {course.instructor}
-                    </div>
-                    <div class="w-full text-black text-[16px] font-normal">
-                      {course.description}
-                    </div>
-                    <div class="text-teal-700 text-[20px] font-bold">
-                      {course.price}
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+                  </Link>
+                </SwiperSlide>
+              </div>
             ))}
+            <div className=" absolute top-52 z-50">
+              <SlideNavButtons />
+            </div>
           </Swiper>
         </div>
       </div>

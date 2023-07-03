@@ -1,14 +1,13 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import headshot from "./images/hero1.png";
-import star from "./images/stars.png";
 import hero2 from "./images/hero2.png";
 import hero3 from "./images/hero3.png";
-
+import hero5 from "./images/hero5.png";
 import Link from "next/link";
 import Courses from "./component/courses";
 import Testimonials from "./component/testimonials";
-import { FaQuoteLeft } from "react-icons/fa";
 
 export default function page() {
   return (
@@ -158,7 +157,7 @@ export default function page() {
               </button>
             </div>
             <div>
-              <Image src={hero3} width={1000} height={300} alt="heroshot" />
+              <Image src={hero5} width={1000} height={300} alt="heroshot" />
             </div>
           </div>
         </div>

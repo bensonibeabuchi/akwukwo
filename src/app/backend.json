@@ -1,82 +1,246 @@
 [
   {
+    "id": "Node.js_Fundamentals",
     "title": "Node.js Fundamentals",
-    "description": "Learn the basics of Node.js and build scalable and efficient backend applications using JavaScript.",
-    "instructor": "Emily Davis",
+    "description": "Learn the basics of Node.js and build scalable server-side applications.",
+    "instructor": "John Smith",
     "duration": "8 weeks",
     "level": "Beginner",
+    "price": "₦110,000",
     "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-14.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile8.jpg?raw=true",
-    "price": "₦300,000"
+    "video": "https://youtu.be/zb3Qk8SG5Ms?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU",
+    "topics": [
+      {
+        "topic": "Node.js Crash Course Tutorial #2 - Node.js Basics",
+        "duration": "42:43",
+        "videoLink": "hhttps://youtu.be/OIBIXYLJjsI?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU"
+      },
+      {
+        "topic": "Node.js Crash Course Tutorial #3 - Clients & Servers",
+        "duration": "13:42",
+        "videoLink": "https://www.youtube.com/watch?v=-HPZ1leCV8k&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=3&pp=iAQB"
+      },
+      {
+        "topic": "Node.js Crash Course Tutorial #4 - Requests & Responses",
+        "duration": "26:53",
+        "videoLink": "https://youtu.be/DQD00NAUPNk?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU"
+      }
+    ]
   },
   {
-    "title": "RESTful API Development with Express",
-    "description": "Master the concepts of building RESTful APIs using Express.js and create robust backend services for web applications.",
-    "instructor": "John Smith",
-    "duration": "10 weeks",
+    "id": "Advanced_Express",
+    "title": "Advanced Express",
+    "description": "Master advanced concepts of the Express framework and build robust backend APIs.",
+    "instructor": "Emily Johnson",
+    "duration": "6 weeks",
     "level": "Intermediate",
+    "price": "₦150,000",
     "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-21.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true",
-    "price": "₦300,000"
+    "video": "https://youtu.be/CLdkGgv9Miw?list=PLs1waz0ZKTGO7agN0cntpe6ro6TIka0ow",
+    "topics": [
+      {
+        "topic": "Building REST API Node JS",
+        "duration": "07:05",
+        "videoLink": "https://youtu.be/zmBvYYs718U?list=PLs1waz0ZKTGO7agN0cntpe6ro6TIka0ow"
+      },
+      {
+        "topic": "Create first Endpoint | Building REST API Node JS",
+        "duration": "07:59",
+        "videoLink": "https://youtu.be/cm0jNz-inkA?list=PLs1waz0ZKTGO7agN0cntpe6ro6TIka0ow"
+      },
+      {
+        "topic": "Register Endpoint | Building REST API Node JS",
+        "duration": "31:53",
+        "videoLink": "https://www.youtube.com/watch?v=cm0jNz-inkA&list=PLs1waz0ZKTGO7agN0cntpe6ro6TIka0ow&index=3&pp=iAQB"
+      }
+    ]
   },
   {
-    "title": "Database Design and Management",
-    "description": "Gain a deep understanding of database design principles and learn how to effectively manage databases for backend development.",
-    "instructor": "Sarah Johnson",
-    "duration": "8 weeks",
-    "level": "Intermediate",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-23.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile5.jpg?raw=true",
-    "price": "₦300,000"
-  },
-  {
-    "title": "Authentication and Authorization",
-    "description": "Explore different authentication and authorization techniques to secure backend APIs and protect user data.",
+    "id": "Databases_with_SQL",
+    "title": "Databases with SQL",
+    "description": "Learn how to design and manage databases using SQL.",
     "instructor": "Michael Brown",
-    "duration": "6 weeks",
+    "duration": "10 weeks",
     "level": "Intermediate",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-22.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile4.jpg?raw=true",
-    "price": "₦300,000"
-  },
-  {
-    "title": "Serverless Architecture with AWS Lambda",
-    "description": "Learn to build scalable and cost-effective backend applications using serverless architecture with AWS Lambda.",
-    "instructor": "Sophia Martinez",
-    "duration": "8 weeks",
-    "level": "Advanced",
+    "price": "₦180,000",
     "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-18.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile2.jpg?raw=true",
-    "price": "₦300,000"
+    "video": "https://youtu.be/323H_mOOWQ4?list=PLxCzCOWd7aiHqU4HKL7-SITyuSIcD93id",
+    "topics": [
+      {
+        "topic": "All Types of SQL Commands with Example | DDL, DML, DCL, TCL and CONSTRAINTS | DBMS",
+        "duration": "10:31",
+        "videoLink": "https://youtu.be/Axf1uckMt6g"
+      },
+      {
+        "topic": "ALTER Command (DDL) in SQL with Implementation on ORACLE",
+        "duration": "13:08",
+        "videoLink": "https://youtu.be/NA3b8JRUmww?list=PLxCzCOWd7aiHqU4HKL7-SITyuSIcD93id"
+      },
+      {
+        "topic": "SQL Queries and Subqueries (part-1) | Database Management System",
+        "duration": "31:53",
+        "videoLink": "https://youtu.be/_yog7h4BokQ?list=PLxCzCOWd7aiHqU4HKL7-SITyuSIcD93id"
+      }
+    ]
   },
   {
-    "title": "Building RESTful APIs with Django",
-    "description": "Discover how to create RESTful APIs using Django and Django REST Framework for efficient backend development.",
-    "instructor": "David Thompson",
-    "duration": "10 weeks",
-    "level": "Intermediate",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-24.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile1.jpg?raw=true",
-    "price": "₦300,000"
-  },
-  {
-    "title": "Real-Time Applications with WebSocket",
-    "description": "Learn to develop real-time applications using WebSocket to enable bidirectional communication between clients and servers.",
-    "instructor": "Laura Wilson",
+    "id": "Building_RESTful_APIs",
+    "title": "Building RESTful APIs",
+    "description": "Discover how to design and implement RESTful APIs for your applications.",
+    "instructor": "Sarah Johnson",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-49.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile16.jpg?raw=true",
-    "price": "₦300,000"
+    "price": "₦200,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-22.jpg?raw=true",
+    "video": "https://youtu.be/0oXYLzuucwE?list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q",
+    "topics": [
+      {
+        "topic": "Planning & First Steps | Creating a REST API with Node.js",
+        "duration": "14:41",
+        "videoLink": "https://youtu.be/blQ60skPzl0?list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q"
+      },
+      {
+        "topic": "Adding More Routes to the API | Creating a REST API with Node.js",
+        "duration": "17:04",
+        "videoLink": "https://youtu.be/FV1Ugv1Temg?list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q"
+      },
+      {
+        "topic": "Handling Errors & Improving the Project Setup | Creating a REST API with Node.js",
+        "duration": "10:16",
+        "videoLink": "https://youtu.be/UVAMha41dwo?list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q"
+      },
+      {
+        "topic": "Parsing the Body & Handling CORS | Creating a REST API with Node.js",
+        "duration": "15:52",
+        "videoLink": "https://youtu.be/zoSJ3bNGPp0?list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q"
+      }
+    ]
   },
   {
-    "title": "Microservices Architecture with Docker and Kubernetes",
-    "description": "Explore the microservices architecture and learn to deploy containerized applications with Docker and Kubernetes.",
-    "instructor": "Daniel Lee",
+    "id": "MongoDB_Essentials",
+    "title": "MongoDB Essentials",
+    "description": "Get started with MongoDB and learn how to work with NoSQL databases.",
+    "instructor": "Robert Davis",
+    "duration": "8 weeks",
+    "level": "Beginner",
+    "price": "₦250,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-9.jpg?raw=true",
+    "video": "https://youtu.be/ExcRbA7fy_A?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA",
+    "topics": [
+      {
+        "topic": "Installing MongoDB",
+        "duration": "04:28",
+        "videoLink": "https://youtu.be/gDOKSgqM-bQ?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      },
+      {
+        "topic": "Collections & Documents",
+        "duration": "03:38",
+        "videoLink": "https://youtu.be/ojKJqNQYaOI?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      },
+      {
+        "topic": "Using MongoDB Compass",
+        "duration": "10:28",
+        "videoLink": "https://youtu.be/bJSj1a84I20?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      },
+      {
+        "topic": "Using the MongoDB Shell",
+        "duration": "06:17",
+        "videoLink": "https://youtu.be/jR49YGYXdxc?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      },
+      {
+        "topic": "Adding New Documents",
+        "duration": "07:15",
+        "videoLink": "https://youtu.be/g3Z0Av9yRSs?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA"
+      }
+    ]
+  },
+  {
+    "id": "Authentication_and_Authorization",
+    "title": "Authentication and Authorization",
+    "description": "Learn how to implement secure authentication and authorization mechanisms in your applications.",
+    "instructor": "Julia Adams",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "price": "₦300,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-24.jpg?raw=true",
+    "video": "https://youtu.be/brcHK3P6ChQ?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd",
+    "topics": [
+      {
+        "topic": "React User Login and Authentication with Axios",
+        "duration": "31:36",
+        "videoLink": "https://youtu.be/X3qyxo_UTR4?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd"
+      },
+      {
+        "topic": "React Protected Routes | Role-Based Authorization | React Router v6",
+        "duration": "30:42",
+        "videoLink": "https://youtu.be/oUZjO00NkhY?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd"
+      },
+      {
+        "topic": "React Login Authentication with JWT Access, Refresh Tokens, Cookies and Axios",
+        "duration": "41:00",
+        "videoLink": "https://youtu.be/nI8PYZNFtac?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd"
+      },
+      {
+        "topic": "React Persistent User Login Authentication with JWT Tokens",
+        "duration": "37:26",
+        "videoLink": "https://youtu.be/27KeYk-5vJw?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd"
+      }
+    ]
+  },
+  {
+    "id": "Scalable_Microservices",
+    "title": "Scalable Microservices",
+    "description": "Discover the concepts of microservices architecture and build scalable applications.",
+    "instructor": "Daniel Wilson",
     "duration": "10 weeks",
     "level": "Advanced",
+    "price": "₦400,000",
+    "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-49.jpg?raw=true",
+    "video": "https://youtu.be/sHPVVdITpwc",
+    "topics": [
+      {
+        "topic": "HTML",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/html_video"
+      },
+      {
+        "topic": "CSS",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/css_video"
+      },
+      {
+        "topic": "JavaScript",
+        "duration": "4 weeks",
+        "videoLink": "https://example.com/js_video"
+      }
+    ]
+  },
+  {
+    "id": "Database_Optimization",
+    "title": "Database Optimization",
+    "description": "Learn techniques to optimize database performance and improve query execution.",
+    "instructor": "Jennifer Lee",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "price": "₦600,000",
     "image": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/backend/akwukwo_image-8.jpg?raw=true",
-    "profile": "https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true",
-    "price": "₦300,000"
+    "video": "https://youtu.be/GA8SaXDLdsY",
+    "topics": [
+      {
+        "topic": "HTML",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/html_video"
+      },
+      {
+        "topic": "CSS",
+        "duration": "2 weeks",
+        "videoLink": "https://example.com/css_video"
+      },
+      {
+        "topic": "JavaScript",
+        "duration": "4 weeks",
+        "videoLink": "https://example.com/js_video"
+      }
+    ]
   }
 ]
