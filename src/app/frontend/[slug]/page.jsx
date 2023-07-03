@@ -109,14 +109,9 @@ export default function Page({ params }) {
             <>
               <div className="flex justify-between text-2xl text-[#286f6b] hover:scale-[1.02] font-medium p-8 mb-2 rounded-xl bg-[#a9bab9]">
                 <Link
-                  href={
-                    <ReactPlayer
-                      url={topic.videoLink}
-                      width={550}
-                      height={300}
-                      controls={true}
-                    />
-                  }
+                  href={topic.videoLink}
+                  target="_blank"
+                  className="visited:text-purple-600"
                 >
                   <div className="flex items-center space-x-4">
                     <FaPlayCircle className="text-[#286f6b] text-3xl" />

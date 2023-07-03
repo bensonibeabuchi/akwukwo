@@ -116,14 +116,6 @@ export default function Page({ params }) {
                     >
                       {topic.topic}
                     </p>
-                    {isOpen && (
-                      <ReactPlayer
-                        url={topic.videoLink}
-                        width={550}
-                        height={300}
-                        controls={true}
-                      />
-                    )}
                   </div>
                 </div>
                 <div>
@@ -133,8 +125,6 @@ export default function Page({ params }) {
             </div>
           );
         })}
-
-        {/*  */}
       </div>
     </div>
   );
