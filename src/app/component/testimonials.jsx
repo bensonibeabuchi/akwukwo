@@ -20,12 +20,15 @@ export default function page() {
           spaceBetween={100}
           slidesPerView={2}
           pagination={{ clickable: true }}
-          // autoplay
+          autoplay
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
           {testimonials.map((testimonial) => (
-            <SwiperSlide key={1} className="rounded-2xl bg-white p-16 mb-12 text-black">
+            <SwiperSlide
+              key={1}
+              className="rounded-2xl bg-white p-16 mb-12 text-black"
+            >
               <div>
                 <Image
                   src={fivestar}

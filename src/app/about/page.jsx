@@ -10,8 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
-import hero3 from "../images/hero3.png";
-import hero5 from "../images/hero5.png";
+
 import Link from "next/link";
 import Testimonials from "../component/testimonials";
 
@@ -51,7 +50,7 @@ export default function page() {
                 />
               </div>
             </div>
-            <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+            <div className="p-[0px] flex-col justify-start items-start gap-[4px] flex">
               <div className="mx-auto p-4">
                 <p className="text-2xl uppercase font-extrabold text-[#286f6b]">
                   Benson Ibeabuchi
@@ -64,7 +63,7 @@ export default function page() {
             <div className="w-[400px] rounded-full mx-auto h-[450px] p-4 bg-white flex-col justify-center items-start overflow-clip ">
               <div className="w-full h-[550px]">
                 <Image
-                  src="https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile10.jpg?raw=true"
+                  src="https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profileella.jpg?raw=true"
                   width={800}
                   height={800}
                   alt="Immanuella I. O. profile image"
@@ -72,7 +71,7 @@ export default function page() {
                 />
               </div>
             </div>
-            <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+            <div className="p-[0px] flex-col justify-start items-start gap-[4px] flex">
               <div className="mx-auto p-4">
                 <p className="text-2xl uppercase font-extrabold text-[#286f6b]">
                   Immanuella I. O.
@@ -95,7 +94,7 @@ export default function page() {
                 />
               </div>
             </div>
-            <div class="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+            <div className="p-[0px] flex-col justify-start items-start gap-[4px] flex">
               <div className="mx-auto p-4">
                 <p className="text-2xl uppercase font-extrabold text-[#286f6b]">
                   Avtomat Kalashnikova

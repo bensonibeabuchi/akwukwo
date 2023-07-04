@@ -10,9 +10,17 @@ export default function footer() {
         <div>
           <ul className="space-y-4">
             <li className="font-medium text-2xl">Features</li>
-            <li>Terms of use</li>
-            <li>Privacy policy</li>
-            <li>Cookie policy</li>
+            <li>
+              <Link href="/terms" className="hover:text-[#fcdc66]">
+                Terms of use
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy" className="hover:text-[#fcdc66]">
+                Privacy Policy
+              </Link>
+            </li>
+
             <li>
               <Link href="/" className="hover:text-[#fcdc66]">
                 <Image src={logo} alt="lgo" width={100} />

@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { FaSearch, FaAngleDown, FaAngleUp } from "react-icons/fa";
 
-export default function faq() {
+export default function Faq() {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
@@ -33,7 +33,7 @@ export default function faq() {
             <div className=" p-4 flex items-center border-t-[1px] border-[#84959444]">
               <p>
                 To enroll in a course, simply navigate to the course page, click
-                on the \"Enroll Now\" button, and follow the prompts to complete
+                on the &quot;Enroll Now&quot; button, and follow the prompts to complete
                 the enrollment process
               </p>
             </div>
