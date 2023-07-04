@@ -37,69 +37,71 @@ export default function page() {
         <div className="py-2 mx-auto mt-32 text-center ">
           <h2 className="p-4 text-[#286f6b]">Our Founders</h2>
         </div>
-        <div className="p-16 flex flex-row w-[1500px] bg-[#c3e0de49] rounded-3xl my-8 mx-auto">
-          <div className=" mx-auto text-center">
-            <div className="w-[400px] rounded-full mx-auto h-[450px] p-4 bg-white flex-col justify-center items-start overflow-clip ">
-              <div className="w-full h-[450px] overflow-clip">
-                <Image
-                  src="https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true"
-                  width={400}
-                  height={800}
-                  alt="Benson Ibeabuchi profile image"
-                  className="mx-auto"
-                />
+        <div className="w-full bg-[#c3e0de49] ">
+          <div className="p-16 flex flex-row w-[1500px] my-8 mx-auto">
+            <div className=" mx-auto text-center">
+              <div className="w-[400px] rounded-full mx-auto h-[450px] p-4 bg-white flex-col justify-center items-start overflow-clip ">
+                <div className="w-full h-[450px] overflow-clip">
+                  <Image
+                    src="https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile6.jpg?raw=true"
+                    width={400}
+                    height={800}
+                    alt="Benson Ibeabuchi profile image"
+                    className="mx-auto"
+                  />
+                </div>
+              </div>
+              <div className="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+                <div className="mx-auto p-4">
+                  <p className="text-2xl uppercase font-extrabold text-[#286f6b]">
+                    Benson Ibeabuchi
+                  </p>
+                  <p className="text-xl font-semibold">Co-Fouder & Ceo</p>
+                </div>
               </div>
             </div>
-            <div className="p-[0px] flex-col justify-start items-start gap-[4px] flex">
-              <div className="mx-auto p-4">
-                <p className="text-2xl uppercase font-extrabold text-[#286f6b]">
-                  Benson Ibeabuchi
-                </p>
-                <p className="text-xl font-semibold">Co-Fouder & Ceo</p>
+            <div className=" mx-auto text-center">
+              <div className="w-[400px] rounded-full mx-auto h-[450px] p-4 bg-white flex-col justify-center items-start overflow-clip ">
+                <div className="w-full h-[550px]">
+                  <Image
+                    src="https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profileella.jpg?raw=true"
+                    width={800}
+                    height={800}
+                    alt="Immanuella I. O. profile image"
+                    className="mx-auto object-fill scale-125"
+                  />
+                </div>
+              </div>
+              <div className="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+                <div className="mx-auto p-4">
+                  <p className="text-2xl uppercase font-extrabold text-[#286f6b]">
+                    Immanuella I. O.
+                  </p>
+                  <p className="text-xl font-semibold">
+                    Co-Fouder & Brand Manager
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className=" mx-auto text-center">
-            <div className="w-[400px] rounded-full mx-auto h-[450px] p-4 bg-white flex-col justify-center items-start overflow-clip ">
-              <div className="w-full h-[550px]">
-                <Image
-                  src="https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profileella.jpg?raw=true"
-                  width={800}
-                  height={800}
-                  alt="Immanuella I. O. profile image"
-                  className="mx-auto object-fill scale-125"
-                />
+            <div className=" mx-auto text-center">
+              <div className="w-[400px] rounded-full mx-auto h-[450px] p-4 bg-white flex-col justify-center items-start overflow-clip ">
+                <div className="w-full h-[550px]">
+                  <Image
+                    src="https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile9.jpg?raw=true"
+                    width={800}
+                    height={800}
+                    alt="Immanuella I. O. profile image"
+                    className="mx-auto object-fill scale-125"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="p-[0px] flex-col justify-start items-start gap-[4px] flex">
-              <div className="mx-auto p-4">
-                <p className="text-2xl uppercase font-extrabold text-[#286f6b]">
-                  Immanuella I. O.
-                </p>
-                <p className="text-xl font-semibold">
-                  Co-Fouder & Brand Manager
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className=" mx-auto text-center">
-            <div className="w-[400px] rounded-full mx-auto h-[450px] p-4 bg-white flex-col justify-center items-start overflow-clip ">
-              <div className="w-full h-[550px]">
-                <Image
-                  src="https://github.com/bensonibeabuchi/capstoneimages/blob/main/profile/profile9.jpg?raw=true"
-                  width={800}
-                  height={800}
-                  alt="Immanuella I. O. profile image"
-                  className="mx-auto object-fill scale-125"
-                />
-              </div>
-            </div>
-            <div className="p-[0px] flex-col justify-start items-start gap-[4px] flex">
-              <div className="mx-auto p-4">
-                <p className="text-2xl uppercase font-extrabold text-[#286f6b]">
-                  Avtomat Kalashnikova
-                </p>
-                <p className="text-xl font-semibold">Marketing Manager</p>
+              <div className="p-[0px] flex-col justify-start items-start gap-[4px] flex">
+                <div className="mx-auto p-4">
+                  <p className="text-2xl uppercase font-extrabold text-[#286f6b]">
+                    Avtomat Kalashnikova
+                  </p>
+                  <p className="text-xl font-semibold">Marketing Manager</p>
+                </div>
               </div>
             </div>
           </div>
