@@ -3,7 +3,7 @@ import React from "react";
 export default function page() {
   return (
     <div>
-      <div className="w-[1500px] mx-auto p-16 pb-32 place-items-center">
+      <div className="w-[1500px] pt-36  mx-auto p-16 pb-32 place-items-center">
         <p className="mx-auto text-3xl font-semibold items-center text-center p-8">
           Contact Us
         </p>

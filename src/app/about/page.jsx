@@ -16,7 +16,7 @@ import Testimonials from "../component/testimonials";
 
 export default function page() {
   return (
-    <div className="bg-[#286f6b] mx-auto">
+    <div className="bg-[#286f6b] mx-auto pt-32 ">
       <div className="w-[1500px] pt-24 mx-auto">
         <div className="grid grid-cols-2 w-[1300px] h-[300px] mx-auto">
           <div className="text-white mt-24">

@@ -20,7 +20,7 @@ SwiperCore.use([Navigation]);
 
 export default function Page() {
   return (
-    <div className="py-16">
+    <div className="py-16 pt-36">
       <div className="py-8 w-[1400px] mx-auto">
         <h3 className="text-2xl font-semibold p-4">Featured course</h3>
         <div>

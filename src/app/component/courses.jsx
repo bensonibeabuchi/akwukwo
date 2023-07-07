@@ -12,6 +12,8 @@ import Image from "next/image";
 import dot from "../images/dot.png";
 import stars from "../images/fivestar.png";
 import Link from "next/link";
+import SlideNavButtons from "./SlideNavButtons";
+import SwiperCore from "swiper/core";
 
 export default function page() {
   return (
@@ -67,7 +69,9 @@ export default function page() {
                 </div>
               </div>
             </SwiperSlide>
+            
           ))}
+          <SlideNavButtons />
         </Swiper>
       </div>
     </div>

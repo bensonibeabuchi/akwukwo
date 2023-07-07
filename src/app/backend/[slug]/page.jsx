@@ -22,7 +22,7 @@ export default function Page({ params }) {
 
   return (
     <div>
-      <div className="w-full mx-auto bg-[#286f6b]">
+      <div className="w-full mx-auto pt-32 bg-[#286f6b]">
         <div className="w-[1500px] mx-auto grid grid-cols-2 items-center ">
           <div className="pl-24 text-white space-y-2 py-4 ">
             <h2 className="pt-16">{subjects.title}</h2>

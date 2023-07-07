@@ -17,8 +17,8 @@ export default function Header() {
   const [pClicked, setPClicked] = useState(false);
   const [dClicked, setDClicked] = useState(false);
   return (
-    <div className="bg-[#286f6b] w-full">
-      <div className="md:w-[1500px]  mx-auto text-xl">
+    <div className="bg-[#286f6b] w-full fixed z-50">
+      <div className="md:w-[1500px] sticky  mx-auto text-xl">
         <nav className="flex justify-between p-8 items-center">
           <div className="flex space-x-12">
             <Link href="/" className="hover:text-[#fcdc66]">

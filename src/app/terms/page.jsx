@@ -3,7 +3,7 @@ import React from "react";
 export default function page() {
   return (
     <div>
-      <div className="w-[1500px] mx-auto p-24 ">
+      <div className="w-[1500px] pt-36 mx-auto p-24 ">
         <h2 className="p-8 text-center">Terms of use </h2>
         <div className="text-lg font-medium">
           <p className="py-4">

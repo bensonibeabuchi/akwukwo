@@ -13,8 +13,8 @@ backendCourses = backend.slice();
 
 export default async function page() {
   return (
-    <div className="mx-auto">
-      <div className="w-full mx-auto bg-[#286f6b]">
+    <div className="mx-auto ">
+      <div className="w-full mx-auto pt-32 bg-[#286f6b]">
         <div className="w-[1800px] mx-auto grid grid-cols-2 items-center ">
           <div className="pl-48 pb-16 text-white py-4 ">
             <h1>Backend</h1>

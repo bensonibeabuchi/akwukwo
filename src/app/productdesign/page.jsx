@@ -14,7 +14,7 @@ productdesignCourses = productdesign.slice();
 export default function page() {
   return (
     <div className="mx-auto">
-      <div className="w-full mx-auto bg-[#286f6b]">
+      <div className="w-ful pt-36 mx-auto bg-[#286f6b]">
         <div className="w-[1800px] mx-auto grid grid-cols-2 items-center ">
           <div className="pl-48 pb-16 text-white py-4 ">
             <h1>Product</h1>

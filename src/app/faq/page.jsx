@@ -15,7 +15,7 @@ export default function Faq() {
 
   return (
     <div>
-      <div className="w-full text-[#241f0b] p-8 pb-32 mx-auto bg-[#deeeed]">
+      <div className="w-full pt-36 text-[#241f0b] p-8 pb-32 mx-auto bg-[#deeeed]">
         <div className="w-[1200px] mx-auto ">
           <h2 className="text-center p-8">Frequently Asked Question</h2>
           <p

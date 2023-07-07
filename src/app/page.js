@@ -11,7 +11,7 @@ import Testimonials from "./component/testimonials";
 
 export default function page() {
   return (
-    <div className="bg-[#286f6b] mx-auto">
+    <div className="bg-[#286f6b] mx-auto pt-64">
       <div className="w-[1500px] mx-auto">
         <div className="grid grid-cols-2 items-center ">
           <div className="text-white">
@@ -42,10 +42,7 @@ export default function page() {
           <nav className="flex mx-auto justify-between pt-4 pb-2 items-center">
             <ul className="flex p-2 mx-auto space-x-16 text-3xl font-medium">
               <li>
-                <Link
-                  href="/frontend"
-                  className="hover:hover:text-[#fcdc66] active:underline"
-                >
+                <Link href="/frontend" className="text-[#fcdc66] underline">
                   Frontend Developement
                 </Link>
               </li>
