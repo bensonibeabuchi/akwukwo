@@ -9,7 +9,7 @@ import backend from "../backend";
 import frontend from "../frontend";
 import dataanalysis from "../dataanalysis";
 import productdesign from "../productdesign";
-import Search from "/search";
+import Search from "./Search";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
