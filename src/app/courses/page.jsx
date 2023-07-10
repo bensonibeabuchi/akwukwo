@@ -102,7 +102,7 @@ export default function Page() {
             {productdesign.map((course) => (
               <div key={course.id}>
                 <SwiperSlide key={course.id} className="px-8 py-16  ">
-                  <Link href={`/frontend/${course.id}`}>
+                  <Link href={`/productdesign/${course.id}`}>
                     <div class="w-[400px] mx-auto h-[450px] p-4 bg-white rounded-lg flex-col justify-center items-start ">
                       <div className="w-full h-[200px] overflow-clip">
                         <Image

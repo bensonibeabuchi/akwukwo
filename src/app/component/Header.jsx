@@ -9,6 +9,7 @@ import backend from "../backend";
 import frontend from "../frontend";
 import dataanalysis from "../dataanalysis";
 import productdesign from "../productdesign";
+import Search from "./search";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,11 +17,12 @@ export default function Header() {
   const [fClicked, setFClicked] = useState(false);
   const [pClicked, setPClicked] = useState(false);
   const [dClicked, setDClicked] = useState(false);
+
   return (
-    <div className="bg-[#286f6b] w-full fixed z-50">
-      <div className="md:w-[1500px] sticky  mx-auto text-xl">
-        <nav className="flex justify-between p-8 items-center">
-          <div className="flex space-x-12">
+    <div className="bg-[#286f6b] md:w-full fixed z-50">
+      <div className="md:w-[1500px] w-[500px] sticky  mx-auto text-xl">
+        <nav className="flex justify-between md:p-8 p-2 items-center">
+          <div className="flex md:space-x-12 space-x-4">
             <Link href="/" className="hover:text-[#fcdc66]">
               <Image
                 src={logo}
@@ -134,13 +136,14 @@ export default function Header() {
           </div>
           <div className="relative flex items-center">
             <FaSearch className="absolute ml-4 text-[#286f6b] pointer-events-none " />
-            <input
+            <Search />
+            {/* <input
               type="search"
               name="search"
               id="search"
               placeholder="What do you want to learn"
               className="rounded-2xl w-[700px] p-4 pl-12 outline-[#286f6b]"
-            />
+            /> */}
           </div>
           <button className="px-6 py-4 mr-8 hover:bg-white hover:text-green-700 hover:scale-105 hover:transition ">
             Sign up

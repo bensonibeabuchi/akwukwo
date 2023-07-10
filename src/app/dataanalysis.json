@@ -1,6 +1,7 @@
 [
   {
     "id": "Introduction_to_Data_Analysis",
+    "category": "dataanalysis",
     "title": "Introduction to Data Analysis",
     "description": "Learn the fundamentals of data analysis and gain insights from various datasets.",
     "instructor": "John Smith",
@@ -29,6 +30,7 @@
   },
   {
     "id": "Data_Wrangling",
+    "category": "dataanalysis",
     "title": "Data Wrangling",
     "description": "Master the art of cleaning and transforming raw data to make it suitable for analysis.",
     "instructor": "Emily Johnson",
@@ -57,6 +59,7 @@
   },
   {
     "id": "Statistical_Analysis",
+    "category": "dataanalysis",
     "title": "Statistical Analysis",
     "description": "Explore statistical techniques to analyze data and make informed decisions.",
     "instructor": "Michael Brown",
@@ -85,6 +88,7 @@
   },
   {
     "id": "Data_Visualization",
+    "category": "dataanalysis",
     "title": "Data Visualization",
     "description": "Learn how to effectively visualize data and communicate insights through compelling visualizations.",
     "instructor": "Sarah Johnson",
@@ -113,6 +117,7 @@
   },
   {
     "id": "Machine_Learning_for_Data_Analysis",
+    "category": "dataanalysis",
     "title": "Machine Learning for Data Analysis",
     "description": "Apply machine learning algorithms to analyze data and make predictions or classifications.",
     "instructor": "Robert Davis",
@@ -141,6 +146,7 @@
   },
   {
     "id": "Big_Data_Analytics",
+    "category": "dataanalysis",
     "title": "Big Data Analytics",
     "description": "Learn techniques for analyzing and extracting valuable insights from large-scale datasets.",
     "instructor": "Julia Adams",
@@ -169,6 +175,7 @@
   },
   {
     "id": "Data_Analysis_with_Python",
+    "category": "dataanalysis",
     "title": "Data Analysis with Python",
     "description": "Master the Python programming language and its libraries for data manipulation and analysis.",
     "instructor": "Daniel Wilson",
@@ -197,6 +204,7 @@
   },
   {
     "id": "Data_Analysis_with_SQL",
+    "category": "dataanalysis",
     "title": "Data Analysis with SQL",
     "description": "Learn how to query and analyze data using SQL, a powerful database language.",
     "instructor": "Laura Thompson",

@@ -1,6 +1,7 @@
 [
   {
     "id": "React.js_Development",
+    "category": "frontend",
     "title": "React.js Development",
     "description": "Learn how to build modern and dynamic user interfaces using React.js library.",
     "instructor": "Francis Enemuo",
@@ -49,6 +50,7 @@
   },
   {
     "id": "Responsive_Web_Design",
+    "category": "frontend",
     "title": "Responsive Web Design",
     "description": "Learn how to create responsive and mobile-friendly websites using HTML, CSS, and JavaScript.",
     "instructor": "John Smith",
@@ -107,6 +109,7 @@
   },
   {
     "id": "JavaScript_Fundamentals",
+    "category": "frontend",
     "title": "JavaScript Fundamentals",
     "description": "Master the fundamental concepts of JavaScript programming language and build interactive web applications.",
     "instructor": "Emily Johnson",
@@ -145,6 +148,7 @@
   },
   {
     "id": "Frontend_Performance_Optimization",
+    "category": "frontend",
     "title": "Frontend Performance Optimization",
     "description": "Optimize your frontend code for improved performance and user experience.",
     "instructor": "Sarah Johnson",
@@ -173,6 +177,7 @@
   },
   {
     "id": "CSS_Grid_Layout",
+    "category": "frontend",
     "title": "CSS Grid Layout",
     "description": "Master the CSS Grid layout and create complex responsive designs with ease.",
     "instructor": "David Wilson",
@@ -201,6 +206,7 @@
   },
   {
     "id": "Advanced_JavaScript_Techniques",
+    "category": "frontend",
     "title": "Advanced JavaScript Techniques",
     "description": "Explore advanced concepts and techniques in JavaScript programming.",
     "instructor": "Alex Turner",
@@ -229,6 +235,7 @@
   },
   {
     "id": "Vue.js_Development",
+    "category": "frontend",
     "title": "Vue.js Development",
     "description": "Learn how to build interactive web applications using the Vue.js framework.",
     "instructor": "Jessica Williams",
@@ -257,6 +264,7 @@
   },
   {
     "id": "React_Native_Development",
+    "category": "frontend",
     "title": "React Native Development",
     "description": "Learn how to build cross-platform mobile applications using React Native framework.",
     "instructor": "Michael Brown",
@@ -305,6 +313,7 @@
   },
   {
     "id": "Sass_Stylesheet",
+    "category": "frontend",
     "title": "Sass Stylesheet",
     "description": "Discover the power of Sass and streamline your CSS development process.",
     "instructor": "Sarah Johnson",

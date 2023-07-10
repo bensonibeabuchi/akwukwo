@@ -17,19 +17,36 @@ import SwiperCore from "swiper/core";
 
 export default function page() {
   return (
-    <div className="w-[1500px] mx-auto">
+    <div className="md:w-[1500px] w-[1000px] mx-auto">
       <div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={10}
-          slidesPerView={3}
-          navigation
+          slidesPerView={1}
+          // navigation
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
+          <div className="absolute top-52  z-50">
+            <SlideNavButtons />
+          </div>
           {courses.map((course) => (
-            <SwiperSlide key={course.id} className="p-8 bg-white">
-              <div key={course.id}>
+            <SwiperSlide key={course.id} className="p-8 mx-auto bg-white">
+              <div key={course.id} className="w-[500px] mx-auto">
                 <div>
                   <Image
                     src={course.image}
@@ -69,9 +86,7 @@ export default function page() {
                 </div>
               </div>
             </SwiperSlide>
-            
           ))}
-          <SlideNavButtons />
         </Swiper>
       </div>
     </div>

@@ -1,6 +1,7 @@
 [
   {
     "id": "Introduction_to_Product_Design",
+    "category": "productdesign",
     "title": "Introduction to Product Design",
     "description": "Learn the fundamentals of product design and develop a solid foundation in UX/UI principles.",
     "instructor": "John Smith",
@@ -29,6 +30,7 @@
   },
   {
     "id": "UI_Design_Fundamentals",
+    "category": "productdesign",
     "title": "UI Design Fundamentals",
     "description": "Master the essentials of user interface design and create visually appealing and intuitive interfaces.",
     "instructor": "Emily Johnson",
@@ -57,6 +59,7 @@
   },
   {
     "id": "User_Research_Methods",
+    "category": "productdesign",
     "title": "User Research Methods",
     "description": "Explore different user research techniques and learn how to gather valuable insights for UX design.",
     "instructor": "Michael Brown",
@@ -85,6 +88,7 @@
   },
   {
     "id": "UX_Design_Process",
+    "category": "productdesign",
     "title": "UX Design Process",
     "description": "Discover the step-by-step process of creating exceptional user experiences from ideation to prototyping.",
     "instructor": "Sarah Johnson",
@@ -113,6 +117,7 @@
   },
   {
     "id": "Visual_Design_Principles",
+    "category": "productdesign",
     "title": "Visual Design Principles",
     "description": "Learn the principles of visual design and apply them to create aesthetically pleasing interfaces.",
     "instructor": "Robert Davis",
@@ -141,6 +146,7 @@
   },
   {
     "id": "Interaction_Design",
+    "category": "productdesign",
     "title": "Interaction Design",
     "description": "Design interactive and engaging user experiences through effective interaction design techniques.",
     "instructor": "Julia Adams",
@@ -169,6 +175,7 @@
   },
   {
     "id": "Prototyping_for_UX",
+    "category": "productdesign",
     "title": "Prototyping for UX",
     "description": "Learn how to create interactive prototypes to validate and communicate your UX design ideas.",
     "instructor": "Daniel Wilson",
@@ -197,6 +204,7 @@
   },
   {
     "id": "Design_Systems",
+    "category": "productdesign",
     "title": "Design Systems",
     "description": "Master the creation and maintenance of design systems to ensure consistency and scalability in UI/UX design.",
     "instructor": "Olivia Thompson",
