@@ -8,6 +8,7 @@ import hero5 from "./images/hero5.png";
 import Link from "next/link";
 import Courses from "./component/courses";
 import Testimonials from "./component/testimonials";
+import PerfectProgram from "./component/PerfectProgram";
 
 export default function page() {
   return (
@@ -38,47 +39,11 @@ export default function page() {
           </div>
         </div>
         <div className="bg-gray-100 md:w-full w-[1000px]  mx-auto pt-16">
-          <div className="py-2 mx-auto md:w-[1500px] w-[1000px] text-center ">
-            <h2 className="p-4">Our Top Courses</h2>
-            <nav className="flex mx-auto justify-between pt-4 pb-2 items-center">
-              <ul className="flex p-2 mx-auto space-x-16 text-3xl font-medium">
-                <li>
-                  <Link
-                    href="/frontend"
-                    className="hover:hover:text-[#fcdc66] active:underline"
-                  >
-                    Frontend Developement
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/backend"
-                    className="hover:hover:text-[#fcdc66] active:underline"
-                  >
-                    Backend Developement
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/productdesign"
-                    className="hover:hover:text-[#fcdc66] active:underline"
-                  >
-                    Product Design
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/dataanalysis"
-                    className="hover:hover:text-[#fcdc66] active:underline"
-                  >
-                    Data Analysis
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div>
-            <Courses />
+          <div className="py-2 mx-auto md:w-[1500px] w-[1000px]">
+            <h3 className="px-4 text-3xl text-[#286f6b] font-bold">
+              Find your perfect program
+            </h3>
+            <PerfectProgram />
           </div>
           <div className="w-[1500px] mx-auto mt-16">
             <div className="grid grid-cols-2 items-center space-x-8">

@@ -35,18 +35,18 @@ export default function page() {
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 50,
+              spaceBetween: 20,
             },
           }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          <div className="absolute top-52  z-50">
+          <div className="absolute top-52 z-50">
             <SlideNavButtons />
           </div>
           {courses.map((course) => (
             <SwiperSlide key={course.id} className="p-8 mx-auto bg-white">
-              <div key={course.id} className="w-[500px] mx-auto">
+              <div key={course.id} className="md:w-full w-[600px] mx-auto">
                 <div>
                   <Image
                     src={course.image}

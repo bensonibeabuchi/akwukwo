@@ -36,10 +36,10 @@ function SearchBar() {
     };
   }, []);
 
-  useEffect(() => {
-    const results = searchThroughData(searchQuery);
-    setSearchResults(results);
-  }, [searchQuery]);
+  // useEffect(() => {
+  //   const results = searchThroughData(searchQuery);
+  //   setSearchResults(results);
+  // }, [searchQuery]);
 
   const searchThroughData = (query) => {
     const allData = [
@@ -59,7 +59,7 @@ function SearchBar() {
   return (
     <div ref={searchRef}>
       <input
-        type="search"
+        type="text"
         name="search"
         id="search"
         placeholder="What do you want to learn"
@@ -81,8 +81,8 @@ function SearchBar() {
                   width={40}
                   height={40}
                 />
-                <div className="flex  truncate flex-col">
-                  <p className="hover:underline  hover:text-[#fcdc66] font-semibold pl-4">
+                <div className="flex truncate flex-col">
+                  <p className="hover:underline hover:text-[#fcdc66] font-semibold pl-4">
                     {item.title}
                   </p>
                   <p className="text-xs truncate pl-4 text-gray-200">

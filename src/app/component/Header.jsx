@@ -20,9 +20,9 @@ export default function Header() {
 
   return (
     <div className="bg-[#286f6b] md:w-full fixed z-50">
-      <div className="md:w-[1500px] w-[500px] sticky  mx-auto text-xl">
+      <div className="md:w-[1700px] w-[500px] sticky  mx-auto text-xl">
         <nav className="flex justify-between md:p-8 p-2 items-center">
-          <div className="flex md:space-x-12 space-x-4">
+          <div className="flex md:space-x-8 space-x-4">
             <Link href="/" className="hover:text-[#fcdc66]">
               <Image
                 src={logo}
@@ -133,20 +133,23 @@ export default function Header() {
                 </div>
               )}
             </div>
+            <div>
+              <p className="font-semibold flex w-full rounded-xl text-center p-1 text-white text-xl cursor-pointer">
+                <Link href="/about">About us</Link>
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold flex w-full rounded-xl text-center p-1 text-white text-xl cursor-pointer">
+                <Link href="/contact">Contact us</Link>
+              </p>
+            </div>
           </div>
           <div className="relative flex items-center">
             <FaSearch className="absolute ml-4 text-[#286f6b] pointer-events-none " />
             <Search />
-            {/* <input
-              type="search"
-              name="search"
-              id="search"
-              placeholder="What do you want to learn"
-              className="rounded-2xl w-[700px] p-4 pl-12 outline-[#286f6b]"
-            /> */}
           </div>
           <button className="px-6 py-4 mr-8 hover:bg-white hover:text-green-700 hover:scale-105 hover:transition ">
-            Sign up
+            <Link href="/signup">Sign Up</Link>
           </button>
         </nav>
       </div>
