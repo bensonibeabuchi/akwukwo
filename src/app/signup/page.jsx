@@ -1,86 +1,82 @@
 import React from "react";
+import { FaEyeSlash } from "react-icons/fa";
+import Link from "next/link";
 
 export default function page() {
   return (
     <>
       <div className="py-40">
-        <div className="bg-[#286f6b] w-[1300px] rounded-xl mx-auto ">
-          <div className="flex flex-row bg-red-500 w-[800px] ">
-            <form
-              action="https://formspree.io/f/xeqbjnyj"
-              method="POST"
-              className="flex flex-col p-16 bg-[#286f6b] rounded-3xl py-24"
-            >
-              <h2 className="text-[#286f6b]">Create an account</h2>
-              <p>
-                Create and account to start learning and get your dream job or
-                upgrade your Resume
-              </p>
-
-              <label htmlFor="name" className="p-2">
-                Full Name
+        <div className="w-[700px] mx-auto bg-[#286f6b45] rounded-2xl text-center p-16">
+          <h2>Create an Account</h2>
+          <p className="p-4 text-[#7e8887] w-3/5 mx-auto">
+            Start your jounrney here into a world of infinite possiblities.
+          </p>
+          <form
+            action="https://formspree.io/f/xeqbjnyj"
+            method="POST"
+            className="mx-auto"
+          >
+            <div className="">
+              <div className="">
                 <input
                   type="text"
-                  name="name"
-                  id="name"
-                  placeholder="What's your full name?"
-                  className="border w-full rounded-lg h-10 p-4"
+                  name="fname"
+                  id="fname"
+                  placeholder="First name"
+                  className="p-4 m-4 rounded w-full"
+                  required
                 />
-              </label>
-
-              <label htmlFor="email" className="p-2">
-                Email address
                 <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="you@example.com"
-                  className="w-full border h-10 p-4"
+                  type="text"
+                  name="lname"
+                  id="lname"
+                  placeholder="Last name"
+                  className="p-4 m-4 rounded w-full "
+                  required
                 />
-              </label>
-              <label htmlFor="password" className="p-2">
-                Paswword
+              </div>
+
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                className="p-4 m-4 rounded w-full"
+                required
+              />
+              <div className="relative">
+                <FaEyeSlash className="absolute ml-[530px] mt-7 text-[#286f6b] text-3xl pointer-events-none " />
                 <input
                   type="password"
                   name="password"
                   id="password"
                   placeholder="Password"
-                  className="border w-full rounded-lg h-10 p-4"
+                  className="p-4 m-4 rounded w-full"
+                  required
                 />
-              </label>
-              <label htmlFor="password" className="p-2">
-                Confirm paswword
+              </div>
+              <div className="relative">
+                <FaEyeSlash className="absolute ml-[530px] mt-7 text-[#286f6b] text-3xl pointer-events-none " />
                 <input
                   type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Password"
-                  className="border w-full rounded-lg h-10 p-4"
+                  name="cpassword"
+                  id="cpassword"
+                  placeholder="Confirm password"
+                  className="p-4 m-4 rounded w-full"
+                  required
                 />
-              </label>
-
-              <label htmlFor="Phone number">
-                Phone number
-                <input
-                  type="number"
-                  name="number"
-                  id="number"
-                  className="border w-full rounded-lg h-10 p-4"
-                />
-              </label>
-
-              <label htmlFor="message" className="p-2">
-                Message
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Write your message for the team here"
-                  className="w-full h-44 border p-4 "
-                />
-              </label>
-              <button className=" p-4 text-xl my-4">Submit</button>
-            </form>
-          </div>
+              </div>
+            </div>
+            <button className="w-full p-4 m-4 text-xl font-bold">
+              Create account
+            </button>
+          </form>
+          <p className="p-4">
+            Already have an account?{" "}
+            <span className="font-bold cursor-pointer">
+              <Link href="/login">Login</Link>
+            </span>{" "}
+          </p>
         </div>
       </div>
     </>
