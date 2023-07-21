@@ -63,7 +63,9 @@ export default function page() {
                   in today&apos;s competitive job market.
                 </p>
                 <button className="px-6 py-4 hover:bg-green-700 hover:text-[#fcdc66] hover:scale-105 hover:transition">
-                  Read More
+                  <Link href="/about" className="my-16">
+                    Read More
+                  </Link>
                 </button>
               </div>
             </div>
@@ -83,7 +85,9 @@ export default function page() {
                   in today&apos;s competitive job market.
                 </p>
                 <button className="px-6 py-4 hover:bg-green-700 hover:text-[#fcdc66] hover:scale-105 hover:transition">
-                  Read More
+                  <Link href="/about" className="my-16">
+                    Read More
+                  </Link>
                 </button>
               </div>
               <div>

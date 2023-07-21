@@ -3,9 +3,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import backendhero from "../images/backendhero.png";
-import backend from "../backend";
 import stars from "../images/fivestar.png";
 import dot from "../images/dot.png";
+import backend from "../backend";
 
 export let backendCourses = [];
 

@@ -178,7 +178,7 @@ export default function page() {
               </p>
               <Link href="/courses" className="my-16">
                 <button className="px-6 py-4 hover:bg-green-700 my-16 hover:text-[#fcdc66] hover:scale-105 hover:transition">
-                  Explore our CVlae
+                  Explore our Courses
                 </button>
               </Link>
             </div>
