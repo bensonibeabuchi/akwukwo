@@ -1,0 +1,98 @@
+trigger:
+- main
+
+variables:
+- group: akwukwo-secrets
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: BuildAndTest
+  displayName: 'Build & Test'
+  jobs:
+    - job: Build
+      displayName: 'Build and Run Tests'
+      pool:
+        vmImage: 'ubuntu-latest'
+      steps:
+        - checkout: self
+
+        - task: NodeTool@0
+          inputs:
+            versionSpec: '18.x'
+          displayName: 'Use Node.js 18'
+
+        - script: |
+            echo "📦 Installing dependencies..."
+            npm ci
+          displayName: 'Install dependencies'
+
+        - script: |
+            echo "🧪 Running unit tests..."
+            npm run test --if-present
+          displayName: 'Run unit tests'
+
+        - task: PublishTestResults@2
+          inputs:
+            testResultsFormat: 'JUnit'
+            testResultsFiles: '**/results.xml'
+            failTaskOnFailedTests: true
+          condition: succeededOrFailed()
+          displayName: 'Publish test results (optional)'
+
+- stage: Terraform
+  displayName: 'Terraform Infrastructure Deployment'
+  dependsOn: BuildAndTest
+  condition: succeeded()   # only if all tests pass
+  jobs:
+  - job: terraform
+    displayName: 'Provision Infrastructure with Terraform'
+    steps:
+    # 1️⃣ Install Terraform
+    - task: TerraformInstaller@1
+      displayName: 'Install Terraform'
+      inputs:
+        terraformVersion: 'latest'
+
+    # 2️⃣ Azure login & Terraform steps
+    - task: AzureCLI@2
+      displayName: 'Terraform: Init, Import, Plan, Apply'
+      inputs:
+        azureSubscription: 'azure-akwukwo-connection'
+        scriptType: bash
+        scriptLocation: inlineScript
+        inlineScript: |
+          echo "📦 Switching to infra directory"
+          cd infra
+
+          echo "🚀 Initializing Terraform backend..."
+          terraform init -reconfigure \
+            -backend-config="resource_group_name=akwukwo-rg" \
+            -backend-config="storage_account_name=akwukwoterraformsa" \
+            -backend-config="container_name=tfstate" \
+            -backend-config="key=terraform.tfstate"
+
+          echo "🪄 Running Terraform Plan..."
+          terraform plan -out=tfplan -var-file=terraform.tfvars
+
+          # Import existing resource group if not managed
+          terraform state list | grep azurerm_resource_group.rg
+          if [ $? -ne 0 ]; then
+            echo "📦 Importing existing resource group into Terraform state..."
+            terraform import azurerm_resource_group.rg /subscriptions/b728acf7-1a7a-4ac6-b8d8-73fc18c8a1a1/resourceGroups/akwukwo-rg
+          else
+            echo "✅ Resource group already managed by Terraform"
+          fi
+
+          echo "🧩 Validating Terraform configuration..."
+          terraform validate
+
+          echo "⚙️ Applying Terraform..."
+          terraform apply -auto-approve tfplan || terraform apply -auto-approve -var-file=terraform.tfvars
+      env:
+        TF_VAR_dockerhub_username: $(dockerhub_username)
+        TF_VAR_dockerhub_password: $(dockerhub_password)
+        TF_VAR_database_url: $(database_url)
+
+

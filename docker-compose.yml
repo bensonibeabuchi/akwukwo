@@ -1,0 +1,31 @@
+services:
+  # ===== Development =====
+  akwukwo-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: bensonibeabuchi/akwukwo-dev:latest
+    container_name: dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+    env_file:
+      - .env
+
+  # ===== Production =====
+  akwukwo-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bensonibeabuchi/akwukwo:latest
+    container_name: prod
+    ports:
+      - "8080:3000"
+    environment:
+      NODE_ENV: production
+    env_file:
+      - .env
