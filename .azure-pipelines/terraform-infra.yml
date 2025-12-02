@@ -85,6 +85,16 @@ stages:
             echo "✅ Resource group already managed by Terraform"
           fi
 
+          # Import existing App Service if not managed
+          terraform state list | grep azurerm_linux_web_app.app_with_secrets
+          if [ $? -ne 0 ]; then
+            echo "📦 Importing existing App Service into Terraform state..."
+            terraform import azurerm_linux_web_app.app_with_secrets \
+              "/subscriptions/b728acf7-1a7a-4ac6-b8d8-73fc18c8a1a1/resourceGroups/akwukwo-rg/providers/Microsoft.Web/sites/akwukwo"
+          else
+            echo "✅ App Service already managed by Terraform"
+          fi
+
           echo "🧩 Validating Terraform configuration..."
           terraform validate
 
