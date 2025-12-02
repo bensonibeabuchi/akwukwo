@@ -145,6 +145,19 @@ resource "azurerm_key_vault_access_policy" "app_policy" {
   secret_permissions = ["Get", "Set", "List"]
 }
 
+resource "azurerm_key_vault_access_policy" "admin_policy" {
+  key_vault_id = azurerm_key_vault.kv.id
+  tenant_id    = data.azurerm_client_config.current.tenant_id
+  object_id    = data.azurerm_client_config.current.object_id
+
+  secret_permissions = [
+    "Get",
+    "List",
+    "Set",
+    "Delete"
+  ]
+}
+
 # 1️⃣1️⃣ Linux Web App (Docker-based) with SystemAssigned identity
 resource "azurerm_linux_web_app" "app" {
   name                = var.app_service_name
