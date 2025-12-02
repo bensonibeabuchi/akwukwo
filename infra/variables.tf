@@ -17,6 +17,10 @@ variable "app_service_name" {
   description = "Name of the Web App"
   default     = "akwukwo"
 }
+variable "app_insights_name" {
+  description = "Application Insight name"
+  default     = "akwukwo-ai"
+}
 
 variable "dockerhub_username" {
   description = "Docker Hub username"
@@ -35,4 +39,13 @@ variable "suffix" {
 variable "database_url" {
   description = "Database URL to store in Key Vault"
   sensitive   = true
+}
+
+variable "log_analytics_workspace_name" {
+  type = string
+  default = "akwukwo-law"
+}
+variable "subnet" {
+  type = string
+  default = "akwukwo-subnet"
 }

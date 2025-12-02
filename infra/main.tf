@@ -17,10 +17,22 @@ resource "azurerm_virtual_network" "vnet" {
 
 # 3️⃣ Subnet
 resource "azurerm_subnet" "subnet" {
-  name = "akwukwo-subnet"
+  name = var.subnet
   resource_group_name = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes = ["10.0.1.0/24"]
+
+  delegation {
+    name = "webapp_delegation"
+
+    service_delegation {
+      name = "Microsoft.Web/serverFarms"
+
+      actions = [
+        "Microsoft.Network/virtualNetworks/subnets/action"
+      ]
+    }
+  }
 }
 
 # 4️⃣ Network Security Group
@@ -69,12 +81,24 @@ resource "azurerm_service_plan" "asp" {
   sku_name = "S1"
 }
 
+
 # 7️⃣ Application Insights
 resource "azurerm_application_insights" "appinsights" {
-  name = "akwukwo-ai"
+  name = var.app_insights_name
   location = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   application_type = "web"
+
+  workspace_id = azurerm_log_analytics_workspace.law.id
+}
+
+# Log Analytics Workspace
+resource "azurerm_log_analytics_workspace" "law" {
+  name                = var.log_analytics_workspace_name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  sku                 = "PerGB2018"
+  retention_in_days   = 30
 }
 
 # 8️⃣ Key Vault
@@ -119,6 +143,7 @@ resource "azurerm_key_vault_access_policy" "app_policy" {
   object_id = azurerm_linux_web_app.app.identity[0].principal_id
 
   secret_permissions = [
+    "Set",
     "Get",
     "List"
   ]
