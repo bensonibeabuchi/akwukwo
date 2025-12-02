@@ -89,15 +89,15 @@ resource "azurerm_key_vault" "kv" {
   purge_protection_enabled = false
 
   # Optional: allow App Service managed identity to read secrets
-  access_policy {
-    tenant_id = data.azurerm_client_config.current.tenant_id
-    object_id = azurerm_linux_web_app.app.identity[0].principal_id
-
-    secret_permissions = [
-      "Get",
-      "List"
-    ]
-  }
+#  access_policy {
+#     tenant_id = data.azurerm_client_config.current.tenant_id
+#     object_id = azurerm_linux_web_app.app.identity[0].principal_id
+#
+#   secret_permissions = [
+#    "Get",
+#   "List"
+#   ]
+# }
 }
 
 # 9️⃣ Key Vault Secrets
@@ -127,33 +127,33 @@ resource "azurerm_key_vault_access_policy" "app_policy" {
 
 # 1️⃣1️⃣ Linux Web App (Docker-based) with Key Vault references
 resource "azurerm_linux_web_app" "app" {
-  name = var.app_service_name
+  name                = var.app_service_name
   resource_group_name = azurerm_resource_group.rg.name
-  location = azurerm_resource_group.rg.location
-  service_plan_id = azurerm_service_plan.asp.id
+  location            = azurerm_resource_group.rg.location
+  service_plan_id     = azurerm_service_plan.asp.id
 
-  site_config {
-    always_on = true
-    application_stack {
-      docker_image = "${var.dockerhub_username}/akwukwo"
-      docker_image_tag = "latest"
-    }
-  }
-
-  # App Settings with Key Vault references
-  app_settings = {
-    WEBSITES_PORT = "3000"
-    DOCKER_REGISTRY_SERVER_URL = "https://index.docker.io"
-    DOCKER_REGISTRY_SERVER_USERNAME = var.dockerhub_username
-    DOCKER_REGISTRY_SERVER_PASSWORD = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
-    APPINSIGHTS_INSTRUMENTATIONKEY = azurerm_application_insights.appinsights.instrumentation_key
-    DATABASE_URL = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.db_url.id})"
-  }
+  depends_on = [
+    azurerm_key_vault_access_policy.app_policy
+  ]
 
   identity {
     type = "SystemAssigned"
   }
+
+  site_config {
+    always_on = true
+    application_stack {
+      docker_image     = "${var.dockerhub_username}/akwukwo"
+      docker_image_tag = "latest"
+    }
+  }
+  app_settings = {
+    DOCKERHUB_PASSWORD              = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
+    DOCKER_REGISTRY_SERVER_PASSWORD = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
+    DATABASE_URL                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.db_url.id})"
+  }
 }
+
 
 # 1️⃣2️⃣ VNet Integration
 resource "azurerm_app_service_virtual_network_swift_connection" "vnet_integration" {
