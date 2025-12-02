@@ -19,7 +19,7 @@ variables:
   value: akwukwo
 
 - name: imageName
-  value: akwukwo-app
+  value: akwukwo
 
 - name: dockerhub_username
   value: bensonibeabuchi
