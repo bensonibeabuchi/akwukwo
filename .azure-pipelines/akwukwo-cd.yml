@@ -7,7 +7,7 @@ resources:
     trigger:
       branches:
         include:
-        - main                  # Optional: only trigger when the infra pipeline runs on 'main'
+        - main
 
 pool:
   vmImage: ubuntu-latest
