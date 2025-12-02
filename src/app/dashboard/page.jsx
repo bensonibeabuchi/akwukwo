@@ -8,40 +8,66 @@ export default function Dashboard() {
   const [user, setUser] = useState(null)
   const [courses, setCourses] = useState([])
   const [uploads, setUploads] = useState([])
+  const [loading, setLoading] = useState(true)
 
   async function loadCourses(userId) {
-    if (!userId) return
-    const { data } = await supabase
-      .from('courses')
-      .select('*')
-      .eq('teacher', userId)
+    try {
+      if (!userId) return
 
-    setCourses(data || [])
+      const { data, error } = await supabase
+        .from('courses')
+        .select('*')
+        .eq('teacher', userId)
+
+      if (error) throw error
+      setCourses(data || [])
+    } catch (err) {
+      console.error("LOAD COURSES ERROR:", err.message)
+    }
   }
 
   async function loadUploads(userId) {
-    if (!userId) return
+    try {
+      if (!userId) return
 
-    const { data, error } = await supabase
-      .from("lessons")
-      .select("*")
-      .eq("teacher_id", userId)
+      const { data, error } = await supabase
+        .from('lessons')
+        .select('*')
+        .eq('teacher_id', userId)
 
-    if (!error) setUploads(data || [])
+      if (error) throw error
+      setUploads(data || [])
+    } catch (err) {
+      console.error("LOAD UPLOADS ERROR:", err.message)
+    }
   }
 
   useEffect(() => {
-    supabase.auth.getUser().then(r => {
-      const u = r.data.user
-      setUser(u)
-      loadCourses(u?.id)
-      loadUploads(u?.id)
-    })
+    async function init() {
+      try {
+        const { data, error } = await supabase.auth.getUser()
+        if (error) throw error
+
+        const u = data.user
+        setUser(u)
+
+        await loadCourses(u?.id)
+        await loadUploads(u?.id)
+      } catch (err) {
+        console.error("AUTH ERROR:", err.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    init()
   }, [])
 
   const handleUploaded = (fileData) => {
     setUploads(prev => [...prev, fileData])
   }
+
+  if (loading) return <p>Loading…</p>
 
   return (
     <div className='flex flex-col gap-4 mt-8 items-center justify-center'>
@@ -53,9 +79,13 @@ export default function Dashboard() {
           {courses.length === 0 && <p>No courses yet</p>}
           {courses.map(c => <div key={c.id}>{c.title}</div>)}
 
-          <UploadForm courseId={courses[0]?.id} onUploaded={handleUploaded} />
+          <UploadForm 
+            courseId={courses[0]?.id} 
+            onUploaded={handleUploaded} 
+          />
 
           <h3>Uploaded files</h3>
+
           {uploads.map((f, idx) => (
             <div key={idx}>
               <p>{f.title}</p>
