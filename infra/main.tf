@@ -67,7 +67,6 @@ resource "azurerm_service_plan" "asp" {
   resource_group_name = azurerm_resource_group.rg.name
   os_type = "Linux"
   sku_name = "S1"
-  reserved = true
 }
 
 # 7️⃣ Application Insights
@@ -102,13 +101,13 @@ resource "azurerm_key_vault" "kv" {
 
 # 9️⃣ Key Vault Secrets
 resource "azurerm_key_vault_secret" "dockerhub_password" {
-  name = "DOCKERHUB_PASSWORD"
+  name = "dockerhub-password"
   value = var.dockerhub_password
   key_vault_id = azurerm_key_vault.kv.id
 }
 
 resource "azurerm_key_vault_secret" "db_url" {
-  name = "DATABASE_URL"
+  name = "database-url"
   value = var.database_url
   key_vault_id = azurerm_key_vault.kv.id
 }
@@ -167,9 +166,9 @@ resource "azurerm_linux_web_app_slot_configuration_names" "app_settings" {
   ]
 
   app_settings = {
-    DOCKERHUB_PASSWORD              = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
+    database-url              = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
     DOCKER_REGISTRY_SERVER_PASSWORD = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
-    DATABASE_URL                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.db_url.id})"
+    database-url                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.db_url.id})"
   }
 
   site_config {
