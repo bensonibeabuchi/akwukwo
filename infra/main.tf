@@ -132,9 +132,9 @@ resource "azurerm_linux_web_app" "app" {
   location            = azurerm_resource_group.rg.location
   service_plan_id     = azurerm_service_plan.asp.id
 
-  depends_on = [
-    azurerm_key_vault_access_policy.app_policy
-  ]
+#  depends_on = [
+#    azurerm_key_vault_access_policy.app_policy
+#  ]
 
   identity {
     type = "SystemAssigned"
@@ -147,11 +147,11 @@ resource "azurerm_linux_web_app" "app" {
       docker_image_tag = "latest"
     }
   }
-  app_settings = {
-    DOCKERHUB_PASSWORD              = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
-    DOCKER_REGISTRY_SERVER_PASSWORD = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
-    DATABASE_URL                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.db_url.id})"
-  }
+#  app_settings = {
+#    DOCKERHUB_PASSWORD              = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
+#    DOCKER_REGISTRY_SERVER_PASSWORD = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
+#    DATABASE_URL                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.db_url.id})"
+#  }
 }
 
 
@@ -159,4 +159,20 @@ resource "azurerm_linux_web_app" "app" {
 resource "azurerm_app_service_virtual_network_swift_connection" "vnet_integration" {
   app_service_id = azurerm_linux_web_app.app.id
   subnet_id = azurerm_subnet.subnet.id
+}
+
+resource "azurerm_linux_web_app_slot_configuration_names" "app_settings" {
+  depends_on = [
+    azurerm_key_vault_access_policy.app_policy
+  ]
+
+  app_settings = {
+    DOCKERHUB_PASSWORD              = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
+    DOCKER_REGISTRY_SERVER_PASSWORD = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
+    DATABASE_URL                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.db_url.id})"
+  }
+
+  site_config {
+    always_on = true
+  }
 }
