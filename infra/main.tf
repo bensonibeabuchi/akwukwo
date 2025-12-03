@@ -209,7 +209,28 @@ resource "azurerm_linux_web_app" "app_with_secrets" {
     DOCKER_REGISTRY_SERVER_USERNAME = var.dockerhub_username
     DOCKER_REGISTRY_SERVER_PASSWORD = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.dockerhub_password.id})"
     DATABASE_URL                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.db_url.id})"
+      # ⭐ Supabase public runtime vars (NOT secrets)
+  NEXT_PUBLIC_SUPABASE_URL        = var.supabase_url
+  NEXT_PUBLIC_SUPABASE_HOST       = var.supabase_host
+  NEXT_PUBLIC_APP_URL             = var.app_url
+
+  # ⭐ Supabase secret keys (stored in Key Vault)
+  NEXT_PUBLIC_SUPABASE_ANON_KEY   = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.supabase_anon_key.id})"
+  SUPABASE_KEY                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.supabase_service_key.id})"
   }
 
   depends_on = [azurerm_key_vault_access_policy.app_policy]
+}
+
+
+resource "azurerm_key_vault_secret" "supabase_anon_key" {
+  name         = "supabase-anon-key"
+  value        = var.supabase_anon_key
+  key_vault_id = azurerm_key_vault.kv.id
+}
+
+resource "azurerm_key_vault_secret" "supabase_service_key" {
+  name         = "supabase-service-key"
+  value        = var.supabase_service_key
+  key_vault_id = azurerm_key_vault.kv.id
 }

@@ -49,3 +49,27 @@ variable "subnet" {
   type = string
   default = "akwukwo-subnet"
 }
+
+variable "supabase_anon_key" {
+  type      = string
+  sensitive = true
+}
+
+variable "supabase_service_key" {
+  type      = string
+  sensitive = true
+}
+
+variable "supabase_url" {
+  type = string
+}
+
+variable "supabase_host" {
+  type = string
+}
+
+variable "app_url" {
+  type = string
+}
+
+
