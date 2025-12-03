@@ -55,10 +55,10 @@ variable "supabase_anon_key" {
   sensitive = true
 }
 
-variable "supabase_service_key" {
-  type      = string
-  sensitive = true
-}
+# variable "supabase_service_key" {
+#   type      = string
+#   sensitive = true
+# }
 
 variable "supabase_url" {
   type = string

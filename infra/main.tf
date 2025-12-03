@@ -228,8 +228,8 @@ resource "azurerm_key_vault_secret" "supabase_anon_key" {
   key_vault_id = azurerm_key_vault.kv.id
 }
 
-resource "azurerm_key_vault_secret" "supabase_service_key" {
-  name         = "supabase-service-key"
-  value        = var.supabase_service_key
-  key_vault_id = azurerm_key_vault.kv.id
-}
+# resource "azurerm_key_vault_secret" "supabase_service_key" {
+#   name         = "supabase-service-key"
+#   value        = var.supabase_service_key
+#   key_vault_id = azurerm_key_vault.kv.id
+# }
