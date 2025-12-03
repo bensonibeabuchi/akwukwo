@@ -215,7 +215,7 @@ resource "azurerm_linux_web_app" "app_with_secrets" {
 
     # ⭐ Supabase secret keys (stored in Key Vault)
     NEXT_PUBLIC_SUPABASE_ANON_KEY   = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.supabase_anon_key.id})"
-    SUPABASE_KEY                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.supabase_service_key.id})"
+    SUPABASE_KEY                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.supabase_anon_key.id})"
   }
 
   depends_on = [azurerm_key_vault_access_policy.app_policy]
