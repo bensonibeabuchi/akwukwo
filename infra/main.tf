@@ -212,7 +212,6 @@ resource "azurerm_linux_web_app" "app_with_secrets" {
       # ⭐ Supabase public runtime vars (NOT secrets)
     NEXT_PUBLIC_SUPABASE_URL        = var.supabase_url
     NEXT_PUBLIC_SUPABASE_HOST       = var.supabase_host
-    NEXT_PUBLIC_APP_URL             = var.app_url
 
     # ⭐ Supabase secret keys (stored in Key Vault)
     NEXT_PUBLIC_SUPABASE_ANON_KEY   = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.supabase_anon_key.id})"

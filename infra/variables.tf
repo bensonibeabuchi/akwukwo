@@ -68,8 +68,4 @@ variable "supabase_host" {
   type = string
 }
 
-variable "app_url" {
-  type = string
-}
-
 
