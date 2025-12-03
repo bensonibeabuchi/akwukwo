@@ -41,13 +41,13 @@ stages:
 
       - script: |
           echo "Logging into Docker Hub..."
-          echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+          echo "$DOCKERHUB_PASSWORD" | docker login -u "$dockerhub_username" --password-stdin
 
           echo "Building image..."
-          docker build -t "$DOCKERHUB_USERNAME/$(imageName):latest" .
+          docker build -t "$dockerhub_username/$(imageName):latest" .
 
           echo "Pushing to Docker Hub..."
-          docker push "$DOCKERHUB_USERNAME/$(imageName):latest"
+          docker push "$dockerhub_username/$(imageName):latest"
         displayName: "Build & Push Docker Image"
         env:
           dockerhub_username: $(dockerhub_username)
