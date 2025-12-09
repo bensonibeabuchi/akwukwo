@@ -8,13 +8,11 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   const { data: courses, isLoading, isError } = useGetCoursesQuery();
-  // console.log('COURSES:',courses)
-
 
   return (
     <>
       <Navbar/>
-      <div className="flex">
+      <div className="flex pt-32">
         <Sidebar/>
         <div className="p-8 flex-1">
           <h1 className="text-2xl font-bold mb-6">Akwukwo — Courses</h1>
