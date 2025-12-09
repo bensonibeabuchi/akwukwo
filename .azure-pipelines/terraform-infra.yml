@@ -90,6 +90,14 @@ stages:
             echo "✅ App Service policy already in Terraform state"
           fi
 
+          if ! terraform state list | grep -q azurerm_key_vault_access_policy.terraform; then
+            echo "📦 Importing App Service Key Vault access policy TERRAFORM..."
+            terraform import azurerm_key_vault_access_policy.terraform \
+              /subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)/providers/Microsoft.KeyVault/vaults/$(kvName)/objectId/$(appPrincipalId)
+          else
+            echo "✅ App Service policy already in Terraform state"
+          fi
+
           # -----------------------------
           # Import existing resource group
           # -----------------------------
@@ -115,7 +123,9 @@ stages:
           terraform validate
 
           echo "⚙️ Applying Terraform..."
-          terraform apply -auto-approve tfplan || terraform apply -auto-approve -var-file=terraform.tfvars
+          terraform plan -out=tfplan -var-file=terraform.tfvars || exit 1
+          terraform apply -auto-approve tfplan
+          # terraform apply -auto-approve tfplan || terraform apply -auto-approve -var-file=terraform.tfvars
       env:
         TF_VAR_dockerhub_username: $(dockerhub_username)
         TF_VAR_dockerhub_password: $(dockerhub_password)
