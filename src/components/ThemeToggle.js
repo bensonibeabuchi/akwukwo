@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme()
@@ -16,7 +17,7 @@ export default function ThemeToggle() {
   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
   className=" px-3 py-2 rounded-md cursor-pointer bg-foreground text-background"
 >
-  {theme === "dark" ? "Light Mode" : "Dark Mode"}
+  {theme === "dark" ? <MdLightMode size={24} /> : <MdDarkMode size={24}/>}
 </button>
 
   )

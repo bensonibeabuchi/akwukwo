@@ -10,20 +10,27 @@
     "test": "jest"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.0",
     "@supabase/supabase-js": "^2.86.0",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.23.25",
+    "hls.js": "^1.6.15",
     "jest-environment-jsdom": "^30.2.0",
-    "next": "16.0.5",
+    "next": "^16.0.7",
     "next-themes": "^0.4.6",
+    "plyr": "^3.8.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-icons": "^5.5.0"
+    "react-hook-form": "^7.68.0",
+    "react-icons": "^5.5.0",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
-    "baseline-browser-mapping": "^2.8.32",
+    "baseline-browser-mapping": "^2.9.2",
     "eslint": "^9",
     "eslint-config-next": "16.0.5",
     "jest": "^30.2.0",

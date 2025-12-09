@@ -44,7 +44,7 @@ stages:
 - stage: Terraform
   displayName: 'Terraform Infrastructure Deployment'
   dependsOn: BuildAndTest
-  condition: succeeded()   # only if all tests pass
+  condition: succeeded()   
   jobs:
   - job: terraform
     displayName: 'Provision Infrastructure with Terraform'

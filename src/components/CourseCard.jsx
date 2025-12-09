@@ -1,15 +1,32 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { formatDistanceToNow } from 'date-fns'
+import NoThumbnail from '../../public/images/no-thumbnail.jpg'
+
+
 
 
 export default function CourseCard({course}){
+  console.log(course)
 
   return (
-    <div style={{border:'1px solid #ddd', padding:12, borderRadius:8}}>
-      <h3>{course.title}</h3>
-      <p>{course.description}</p>
-      <Image src={course.file_url} alt={course.title} width={200} height={200}/>
-      <Link href={`/courses/${course.id}`}>Open</Link>
+    <div className="rounded-xl w-full">
+      <Link href={`/courses/${course.id}`}>
+        <div className="relative w-full aspect-video rounded-t-xl bg-background">
+          <Image
+            src={course.thumbnail || NoThumbnail}
+            alt={course.title}
+            fill
+            className="object-cover rounded-t-xl"
+          />
+        </div>
+
+        <p className="font-bold mt-2 truncate capitalize">{course.title}</p>
+        <p className='flex gap-3 text-sm'>views &#8226; {formatDistanceToNow(new Date(course.created_at), { addSuffix: true })}</p>
+
+        <p className='truncate'>{course.description}</p>
+      </Link>
     </div>
+
   )
 }
