@@ -192,10 +192,7 @@ resource "azurerm_linux_web_app" "app" {
 
 resource "azurerm_linux_web_app_slot" "staging" {
   name = "staging"
-  resource_group_name = azurerm_linux_web_app.app_with_secrets.resource_group_name
-  location = azurerm_linux_web_app.app_with_secrets.location
-  app_service_plan_id = azurerm_linux_web_app.app_with_secrets.service_plan_id
-  parent_app_id = azurerm_linux_web_app.app_with_secrets.id
+  app_service_id      = azurerm_linux_web_app.app_with_secrets.id
 
   identity {
     type = "SystemAssigned"

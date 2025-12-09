@@ -38,6 +38,7 @@ stages:
 
 - stage: Terraform
   displayName: 'Terraform Infrastructure Deployment'
+  dependsOn: Build
   condition: succeeded()   
   jobs:
   - job: terraform
