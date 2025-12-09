@@ -123,6 +123,18 @@ resource "azurerm_key_vault" "kv" {
 # }
 }
 
+resource "azurerm_key_vault_access_policy" "terraform" {
+  key_vault_id = azurerm_key_vault.kv.id
+  tenant_id    = data.azurerm_client_config.current.tenant_id
+  object_id    = azurerm_linux_web_app.app.identity[0].principal_id  # Terraform's service principal
+
+  secret_permissions = [
+    "Get",
+    "List",
+    "Set"
+  ]
+}
+
 # 9️⃣ Key Vault Secrets
 resource "azurerm_key_vault_secret" "dockerhub_password" {
   name = "dockerhub-password"
@@ -176,6 +188,30 @@ resource "azurerm_linux_web_app" "app" {
       docker_image_tag = "latest"
     }
   }
+}
+
+resource "azurerm_linux_web_app_slot" "staging" {
+  name = "staging"
+  resource_group_name = azurerm_linux_web_app.app_with_secrets.resource_group_name
+  location = azurerm_linux_web_app.app_with_secrets.location
+  app_service_plan_id = azurerm_linux_web_app.app_with_secrets.service_plan_id
+  parent_app_id = azurerm_linux_web_app.app_with_secrets.id
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  site_config {
+    always_on = true
+    application_stack {
+      docker_image     = "${var.dockerhub_username}/akwukwo"
+      docker_image_tag = "latest"
+    }
+  }
+
+  app_settings = azurerm_linux_web_app.app_with_secrets.app_settings
+
+  depends_on = [azurerm_key_vault_access_policy.app_policy]
 }
 
 

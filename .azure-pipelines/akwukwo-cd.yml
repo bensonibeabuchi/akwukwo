@@ -61,9 +61,9 @@ stages:
   dependsOn: Build
   condition: succeeded()   # only if Build succeeds
   jobs:
-  - deployment: DeployToProduction
-    displayName: "Deploy to Production Environment"
-    environment: 'production'   # 👈 Must match the environment name you created
+  - deployment: DeployToStaging
+    displayName: "Deploy to Staging Environment"
+    environment: 'staging'   # 👈 Must match the environment name you created
     strategy:
       runOnce:
         deploy:
@@ -75,4 +75,5 @@ stages:
               inputs:
                 azureSubscription: "$(service_connection)"
                 appName: "$(appServiceName)"
+                slotName: "staging"
                 imageName: "$(dockerhub_username)/$(imageName):latest"

@@ -8,11 +8,11 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-- stage: BuildAndTest
-  displayName: 'Build & Test'
+- stage: Build
+  displayName: 'Build Stage'
   jobs:
     - job: Build
-      displayName: 'Build and Run Tests'
+      displayName: 'Build'
       pool:
         vmImage: 'ubuntu-latest'
       steps:
