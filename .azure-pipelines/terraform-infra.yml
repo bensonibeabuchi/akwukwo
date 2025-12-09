@@ -108,13 +108,13 @@ stages:
           # -----------------------------
           # Key Vault Access Policy
           # -----------------------------
-          if ! terraform state list | grep -q azurerm_key_vault_access_policy.app_policy; then
-            echo "📦 Importing Key Vault access policy..."
-            terraform import azurerm_key_vault_access_policy.app_policy \
-              "/subscriptions/$subscription_id/resourceGroups/$resource_group_name/providers/Microsoft.KeyVault/vaults/$kvName/objectId/$appPrincipalId"
-          else
-            echo "✅ Key Vault access policy already in state"
-          fi
+          # if ! terraform state list | grep -q azurerm_key_vault_access_policy.app_policy; then
+          #  echo "📦 Importing Key Vault access policy..."
+          #  terraform import azurerm_key_vault_access_policy.app_policy \
+          #    "/subscriptions/$subscription_id/resourceGroups/$resource_group_name/providers/Microsoft.KeyVault/vaults/$kvName/objectId/$appPrincipalId"
+          # else
+          #  echo "✅ Key Vault access policy already in state"
+          #fi
 
           echo "🧩 Validating Terraform configuration..."
           terraform validate

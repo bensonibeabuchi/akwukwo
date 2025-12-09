@@ -175,21 +175,21 @@ resource "azurerm_key_vault_access_policy" "admin_policy" {
   }
 }
 
-resource "azurerm_key_vault_access_policy" "terraform" {
-  key_vault_id = azurerm_key_vault.kv.id
-  tenant_id    = data.azurerm_client_config.current.tenant_id
-  object_id    = azurerm_linux_web_app.app.identity[0].principal_id  # Terraform's service principal
+# resource "azurerm_key_vault_access_policy" "terraform" {
+#   key_vault_id = azurerm_key_vault.kv.id
+#   tenant_id    = data.azurerm_client_config.current.tenant_id
+#   object_id    = azurerm_linux_web_app.app.identity[0].principal_id  # Terraform's service principal
 
-  secret_permissions = [
-    "Get",
-    "List",
-    "Set"
-  ]
-  lifecycle {
-    prevent_destroy = true
-    ignore_changes  = all
-  }
-}
+#   secret_permissions = [
+#     "Get",
+#     "List",
+#     "Set"
+#   ]
+#   lifecycle {
+#     prevent_destroy = true
+#     ignore_changes  = all
+#   }
+# }
 
 # 1️⃣1️⃣ Linux Web App (Docker-based) with SystemAssigned identity
 resource "azurerm_linux_web_app" "app" {
