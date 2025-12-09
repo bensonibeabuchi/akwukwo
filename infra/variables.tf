@@ -68,9 +68,6 @@ variable "supabase_host" {
   type = string
 }
 
-variable "supabase_url" {}
-variable "supabase_anon_key" {}
-variable "database_url" {}
 
 variable "staging_supabase_url" {}
 variable "staging_supabase_anon_key" {}
