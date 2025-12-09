@@ -71,11 +71,32 @@ stages:
           echo "🪄 Running Terraform Plan..."
           terraform plan -out=tfplan -var-file=terraform.tfvars
 
-          # Import existing resource group if not managed
+          # -----------------------------
+          # Import existing resources
+          # -----------------------------
+          if ! terraform state list | grep -q azurerm_key_vault.kv; then
+            echo "📦 Importing existing Key Vault..."
+            terraform import azurerm_key_vault.kv \
+              /subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)/providers/Microsoft.KeyVault/vaults/$(kvName)
+          else
+            echo "✅ Key Vault already in Terraform state"
+          fi
+
+          if ! terraform state list | grep -q azurerm_key_vault_access_policy.app_policy; then
+            echo "📦 Importing App Service Key Vault access policy..."
+            terraform import azurerm_key_vault_access_policy.app_policy \
+              /subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)/providers/Microsoft.KeyVault/vaults/$(kvName)/objectId/$(appPrincipalId)
+          else
+            echo "✅ App Service policy already in Terraform state"
+          fi
+
+          # -----------------------------
+          # Import existing resource group
+          # -----------------------------
           terraform state list | grep azurerm_resource_group.rg
           if [ $? -ne 0 ]; then
             echo "📦 Importing existing resource group into Terraform state..."
-            terraform import azurerm_resource_group.rg /subscriptions/b728acf7-1a7a-4ac6-b8d8-73fc18c8a1a1/resourceGroups/akwukwo-rg
+            terraform import azurerm_resource_group.rg /subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)
           else
             echo "✅ Resource group already managed by Terraform"
           fi
@@ -85,7 +106,7 @@ stages:
           if [ $? -ne 0 ]; then
             echo "📦 Importing existing App Service into Terraform state..."
             terraform import azurerm_linux_web_app.app_with_secrets \
-              "/subscriptions/b728acf7-1a7a-4ac6-b8d8-73fc18c8a1a1/resourceGroups/akwukwo-rg/providers/Microsoft.Web/sites/akwukwo"
+              "/subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)/providers/Microsoft.Web/sites/akwukwo"
           else
             echo "✅ App Service already managed by Terraform"
           fi
@@ -102,6 +123,10 @@ stages:
         TF_VAR_supabase_anon_key: $(supabase_anon_key)
         TF_VAR_supabase_url: $(supabase_url)
         TF_VAR_supabase_host: $(supabase_host)
+        subscription_id: $(subscription_id)
+        resource_group_name: $(resource_group_name)
+        kvName: $(kvName)
+        appPrincipalId: $(appPrincipalId)
 
 
 
