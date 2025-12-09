@@ -267,5 +267,4 @@ resource "azurerm_linux_web_app" "app_with_secrets" {
     SUPABASE_KEY                    = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.supabase_anon_key.id})"
   }
 
-  depends_on = [azurerm_key_vault_access_policy.app_policy]
 }
