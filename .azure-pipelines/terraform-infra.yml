@@ -107,5 +107,8 @@ stages:
         TF_VAR_supabase_anon_key: $(supabase_anon_key)
         TF_VAR_supabase_url: $(supabase_url)
         TF_VAR_supabase_host: $(supabase_host)
+        NEXT_PUBLIC_SUPABASE_URL: $(supabase_url)
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: $(supabase_anon_key)
+
 
 
