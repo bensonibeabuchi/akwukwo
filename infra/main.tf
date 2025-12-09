@@ -192,44 +192,118 @@ resource "azurerm_key_vault_access_policy" "admin_policy" {
 # }
 
 # 1️⃣1️⃣ Linux Web App (Docker-based) with SystemAssigned identity
+# resource "azurerm_linux_web_app" "app" {
+#   name                = var.app_service_name
+#   resource_group_name = azurerm_resource_group.rg.name
+#   location            = azurerm_resource_group.rg.location
+#   service_plan_id     = azurerm_service_plan.asp.id
+
+#   identity {
+#     type = "SystemAssigned"
+#   }
+
+#   site_config {
+#     always_on = true
+#     application_stack {
+#       docker_image     = "${var.dockerhub_username}/akwukwo"
+#       docker_image_tag = "latest"
+#     }
+#   }
+# }
+
+# resource "azurerm_linux_web_app_slot" "staging" {
+#   name = "staging"
+#   app_service_id      = azurerm_linux_web_app.app_with_secrets.id
+
+#   identity {
+#     type = "SystemAssigned"
+#   }
+
+#   site_config {
+#     always_on = true
+#     application_stack {
+#       docker_image     = "${var.dockerhub_username}/akwukwo"
+#       docker_image_tag = "latest"
+#     }
+#   }
+
+#   app_settings = azurerm_linux_web_app.app_with_secrets.app_settings
+
+#   depends_on = [azurerm_key_vault_access_policy.app_policy]
+# }
+
 resource "azurerm_linux_web_app" "app" {
   name                = var.app_service_name
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
-  service_plan_id     = azurerm_service_plan.asp.id
-
-  identity {
-    type = "SystemAssigned"
-  }
+  service_plan_id     = azurerm_service_plan.plan.id
 
   site_config {
     always_on = true
-    application_stack {
-      docker_image     = "${var.dockerhub_username}/akwukwo"
-      docker_image_tag = "latest"
-    }
+  }
+
+  app_settings = {
+    # Production only settings
+    "SUPABASE_URL"                = var.supabase_url
+    "SUPABASE_ANON_KEY"           = var.supabase_anon_key
+    "DATABASE_URL"                = var.database_url
+    "NEXT_PUBLIC_SUPABASE_URL"    = var.supabase_url
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY" = var.supabase_anon_key
+
+    # Required
+    "DOCKER_REGISTRY_SERVER_URL"   = "https://index.docker.io"
+    "DOCKER_REGISTRY_SERVER_USERNAME" = var.docker_username
+    "DOCKER_REGISTRY_SERVER_PASSWORD" = var.docker_password
+  }
+
+  # Tell Azure: these are production-only (sticky)
+  app_settings_slot_sticky = [
+    "SUPABASE_URL",
+    "SUPABASE_ANON_KEY",
+    "NEXT_PUBLIC_SUPABASE_URL",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    "DATABASE_URL"
+  ]
+
+  identity {
+    type = "SystemAssigned"
   }
 }
 
-resource "azurerm_linux_web_app_slot" "staging" {
-  name = "staging"
-  app_service_id      = azurerm_linux_web_app.app_with_secrets.id
 
-  identity {
-    type = "SystemAssigned"
-  }
+# ================================
+#         DEPLOYMENT SLOT
+# ================================
+
+resource "azurerm_linux_web_app_slot" "staging" {
+  name                 = "staging"
+  app_service_id       = azurerm_linux_web_app.app.id
+  service_plan_id      = azurerm_service_plan.plan.id
 
   site_config {
     always_on = true
-    application_stack {
-      docker_image     = "${var.dockerhub_username}/akwukwo"
-      docker_image_tag = "latest"
-    }
   }
 
-  app_settings = azurerm_linux_web_app.app_with_secrets.app_settings
+  app_settings = {
+    "SUPABASE_URL"                = var.staging_supabase_url
+    "SUPABASE_ANON_KEY"           = var.staging_supabase_anon_key
+    "NEXT_PUBLIC_SUPABASE_URL"    = var.staging_supabase_url
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY" = var.staging_supabase_anon_key
+    "DATABASE_URL"                = var.staging_database_url
 
-  depends_on = [azurerm_key_vault_access_policy.app_policy]
+    "DOCKER_REGISTRY_SERVER_URL"      = "https://index.docker.io"
+    "DOCKER_REGISTRY_SERVER_USERNAME" = var.docker_username
+    "DOCKER_REGISTRY_SERVER_PASSWORD" = var.docker_password
+  }
+
+  # These settings remain specific to the staging slot only
+  app_settings_slot_sticky = [
+    "SUPABASE_URL",
+    "SUPABASE_ANON_KEY",
+    "NEXT_PUBLIC_SUPABASE_URL",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    "DATABASE_URL"
+  ]
 }
 
 

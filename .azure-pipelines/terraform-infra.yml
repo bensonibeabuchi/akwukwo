@@ -128,10 +128,16 @@ stages:
       env:
         TF_VAR_dockerhub_username: $(dockerhub_username)
         TF_VAR_dockerhub_password: $(dockerhub_password)
+
         TF_VAR_database_url: $(database_url)
         TF_VAR_supabase_anon_key: $(supabase_anon_key)
         TF_VAR_supabase_url: $(supabase_url)
         TF_VAR_supabase_host: $(supabase_host)
+
+        TF_VAR_staging_supabase_url: $(staging_supabase_url)
+        TF_VAR_staging_supabase_anon_key: $(staging_supabase_anon_key)
+        TF_VAR_staging_database_url: $(staging_database_url)
+
         subscription_id: $(subscription_id)
         resource_group_name: $(resource_group_name)
         kvName: $(kvName)
