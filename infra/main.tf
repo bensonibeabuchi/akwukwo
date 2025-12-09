@@ -247,6 +247,9 @@ resource "azurerm_linux_web_app" "app_with_secrets" {
   identity {
     type = "SystemAssigned"
   }
+  app_settings = {
+    NEXT_PUBLIC_SUPABASE_ANON_KEY = "@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.supabase_anon_key.id})"
+  }
 
   site_config {
     always_on = true
