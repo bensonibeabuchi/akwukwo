@@ -159,9 +159,7 @@ resource "azurerm_key_vault_access_policy" "app_policy" {
 
   secret_permissions = ["Get", "Set", "List"]
 
-  lifecycle {
-    ignore_changes = [secret_permissions]   # prevents accidental overwrites
-  }
+
 }
 
 # Admin / Terraform operator policy
