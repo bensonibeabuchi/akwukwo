@@ -236,7 +236,7 @@ resource "azurerm_linux_web_app" "app" {
   name                = var.app_service_name
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
-  service_plan_id     = azurerm_service_plan.plan.id
+  service_plan_id     = azurerm_service_plan.asp.id
 
   site_config {
     always_on = true
@@ -278,7 +278,7 @@ resource "azurerm_linux_web_app" "app" {
 resource "azurerm_linux_web_app_slot" "staging" {
   name                 = "staging"
   app_service_id       = azurerm_linux_web_app.app.id
-  service_plan_id      = azurerm_service_plan.plan.id
+  service_plan_id      = azurerm_service_plan.asp.id
 
   site_config {
     always_on = true
