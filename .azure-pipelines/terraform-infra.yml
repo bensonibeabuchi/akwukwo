@@ -4,6 +4,9 @@ trigger:
 variables:
 - group: akwukwo-secrets
 
+- name: appServiceName
+  value: akwukwo
+
 pool:
   vmImage: ubuntu-latest
 
@@ -68,64 +71,60 @@ stages:
             -backend-config="container_name=tfstate" \
             -backend-config="key=terraform.tfstate"
 
-          echo "🪄 Running Terraform Plan..."
-          terraform plan -out=tfplan -var-file=terraform.tfvars
+          echo "🪄 Checking and importing existing resources..."
 
           # -----------------------------
-          # Import existing resources
+          # Resource Group
+          # -----------------------------
+          if ! terraform state list | grep -q azurerm_resource_group.rg; then
+            echo "📦 Importing existing resource group..."
+            terraform import azurerm_resource_group.rg /subscriptions/$subscription_id/resourceGroups/$resource_group_name
+          else
+            echo "✅ Resource group already in state"
+          fi
+
+          # -----------------------------
+          # App Service
+          # -----------------------------
+          if ! terraform state list | grep -q azurerm_linux_web_app.app_with_secrets; then
+            echo "📦 Importing existing App Service..."
+            terraform import azurerm_linux_web_app.app_with_secrets \
+              /subscriptions/$subscription_id/resourceGroups/$resource_group_name/providers/Microsoft.Web/sites/$appServiceName
+          else
+            echo "✅ App Service already in state"
+          fi
+
+          # -----------------------------
+          # Key Vault
           # -----------------------------
           if ! terraform state list | grep -q azurerm_key_vault.kv; then
             echo "📦 Importing existing Key Vault..."
             terraform import azurerm_key_vault.kv \
-              /subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)/providers/Microsoft.KeyVault/vaults/$(kvName)
+              /subscriptions/$subscription_id/resourceGroups/$resource_group_name/providers/Microsoft.KeyVault/vaults/$kvName
           else
-            echo "✅ Key Vault already in Terraform state"
+            echo "✅ Key Vault already in state"
           fi
 
+          # -----------------------------
+          # Key Vault Access Policy
+          # -----------------------------
           if ! terraform state list | grep -q azurerm_key_vault_access_policy.app_policy; then
-            echo "📦 Importing App Service Key Vault access policy..."
+            echo "📦 Importing Key Vault access policy..."
             terraform import azurerm_key_vault_access_policy.app_policy \
-              /subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)/providers/Microsoft.KeyVault/vaults/$(kvName)/objectId/$(appPrincipalId)
+              "/subscriptions/$subscription_id/resourceGroups/$resource_group_name/providers/Microsoft.KeyVault/vaults/$kvName/objectId/$appPrincipalId"
           else
-            echo "✅ App Service policy already in Terraform state"
-          fi
-
-          if ! terraform state list | grep -q azurerm_key_vault_access_policy.terraform; then
-            echo "📦 Importing App Service Key Vault access policy TERRAFORM..."
-            terraform import azurerm_key_vault_access_policy.terraform \
-              /subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)/providers/Microsoft.KeyVault/vaults/$(kvName)/objectId/$(appPrincipalId)
-          else
-            echo "✅ App Service policy already in Terraform state"
-          fi
-
-          # -----------------------------
-          # Import existing resource group
-          # -----------------------------
-          terraform state list | grep azurerm_resource_group.rg
-          if [ $? -ne 0 ]; then
-            echo "📦 Importing existing resource group into Terraform state..."
-            terraform import azurerm_resource_group.rg /subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)
-          else
-            echo "✅ Resource group already managed by Terraform"
-          fi
-
-          # Import existing App Service if not managed
-          terraform state list | grep azurerm_linux_web_app.app_with_secrets
-          if [ $? -ne 0 ]; then
-            echo "📦 Importing existing App Service into Terraform state..."
-            terraform import azurerm_linux_web_app.app_with_secrets \
-              "/subscriptions/$(subscription_id)/resourceGroups/$(resource_group_name)/providers/Microsoft.Web/sites/akwukwo"
-          else
-            echo "✅ App Service already managed by Terraform"
+            echo "✅ Key Vault access policy already in state"
           fi
 
           echo "🧩 Validating Terraform configuration..."
           terraform validate
 
+          echo "🪄 Planning Terraform changes..."
+          terraform plan -out=tfplan -var-file=terraform.tfvars
+
           echo "⚙️ Applying Terraform..."
-          terraform plan -out=tfplan -var-file=terraform.tfvars || exit 1
           terraform apply -auto-approve tfplan
-          # terraform apply -auto-approve tfplan || terraform apply -auto-approve -var-file=terraform.tfvars
+
       env:
         TF_VAR_dockerhub_username: $(dockerhub_username)
         TF_VAR_dockerhub_password: $(dockerhub_password)
@@ -137,6 +136,4 @@ stages:
         resource_group_name: $(resource_group_name)
         kvName: $(kvName)
         appPrincipalId: $(appPrincipalId)
-
-
-
+        appServiceName: $(appServiceName)

@@ -185,6 +185,10 @@ resource "azurerm_key_vault_access_policy" "terraform" {
     "List",
     "Set"
   ]
+  lifecycle {
+    prevent_destroy = true
+    ignore_changes  = all
+  }
 }
 
 # 1️⃣1️⃣ Linux Web App (Docker-based) with SystemAssigned identity
