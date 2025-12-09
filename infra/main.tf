@@ -252,8 +252,8 @@ resource "azurerm_linux_web_app" "app" {
 
     # Required
     "DOCKER_REGISTRY_SERVER_URL"   = "https://index.docker.io"
-    "DOCKER_REGISTRY_SERVER_USERNAME" = var.docker_username
-    "DOCKER_REGISTRY_SERVER_PASSWORD" = var.docker_password
+    "DOCKER_REGISTRY_SERVER_USERNAME" = var.dockerhub_username
+    "DOCKER_REGISTRY_SERVER_PASSWORD" = var.dockerhub_password
   }
 
   # Tell Azure: these are production-only (sticky)
@@ -292,8 +292,8 @@ resource "azurerm_linux_web_app_slot" "staging" {
     "DATABASE_URL"                = var.staging_database_url
 
     "DOCKER_REGISTRY_SERVER_URL"      = "https://index.docker.io"
-    "DOCKER_REGISTRY_SERVER_USERNAME" = var.docker_username
-    "DOCKER_REGISTRY_SERVER_PASSWORD" = var.docker_password
+    "DOCKER_REGISTRY_SERVER_USERNAME" = var.dockerhub_username
+    "DOCKER_REGISTRY_SERVER_PASSWORD" = var.dockerhub_password
   }
 
   # These settings remain specific to the staging slot only
