@@ -280,7 +280,6 @@ resource "azurerm_linux_web_app" "app" {
 resource "azurerm_linux_web_app_slot" "staging" {
   name                 = "staging"
   app_service_id       = azurerm_linux_web_app.app.id
-  service_plan_id      = azurerm_service_plan.asp.id
 
   site_config {
     always_on = true
@@ -298,15 +297,6 @@ resource "azurerm_linux_web_app_slot" "staging" {
     "DOCKER_REGISTRY_SERVER_PASSWORD" = var.dockerhub_password
   }
 
-  sticky_settings {
-    app_setting_names = [
-      "SUPABASE_URL",
-      "SUPABASE_ANON_KEY",
-      "NEXT_PUBLIC_SUPABASE_URL",
-      "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-      "DATABASE_URL"
-    ]
-  }
 }
 
 
