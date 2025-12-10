@@ -257,13 +257,15 @@ resource "azurerm_linux_web_app" "app" {
   }
 
   # Tell Azure: these are production-only (sticky)
-  app_settings_slot_sticky = [
-    "SUPABASE_URL",
-    "SUPABASE_ANON_KEY",
-    "NEXT_PUBLIC_SUPABASE_URL",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-    "DATABASE_URL"
-  ]
+  sticky_settings {
+    app_setting_names = [
+      "SUPABASE_URL",
+      "SUPABASE_ANON_KEY",
+      "NEXT_PUBLIC_SUPABASE_URL",
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "DATABASE_URL"
+    ]
+  }
 
   identity {
     type = "SystemAssigned"
@@ -296,14 +298,15 @@ resource "azurerm_linux_web_app_slot" "staging" {
     "DOCKER_REGISTRY_SERVER_PASSWORD" = var.dockerhub_password
   }
 
-  # These settings remain specific to the staging slot only
-  app_settings_slot_sticky = [
-    "SUPABASE_URL",
-    "SUPABASE_ANON_KEY",
-    "NEXT_PUBLIC_SUPABASE_URL",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-    "DATABASE_URL"
-  ]
+  sticky_settings {
+    app_setting_names = [
+      "SUPABASE_URL",
+      "SUPABASE_ANON_KEY",
+      "NEXT_PUBLIC_SUPABASE_URL",
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "DATABASE_URL"
+    ]
+  }
 }
 
 
@@ -327,7 +330,7 @@ resource "azurerm_linux_web_app" "app_with_secrets" {
   site_config {
     always_on = true
     application_stack {
-      docker_image     = "${var.dockerhub_username}/akwukwo"
+      docker_image = "${var.dockerhub_username}/akwukwo"
       docker_image_tag = "latest"
     }
   }
