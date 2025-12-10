@@ -319,9 +319,6 @@ resource "azurerm_linux_web_app" "app_with_secrets" {
 
   site_config {
     always_on = true
-    application_stack {
-
-    }
   }
 
   app_settings = {
