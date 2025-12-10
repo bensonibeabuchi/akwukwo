@@ -10,6 +10,11 @@ const nextConfig = {
         },
       ],
     },
+  allowedDevOrigins: [
+    "https://akwukwo-staging.azurewebsites.net",
+    "http://akwukwo-staging.azurewebsites.net",
+    "http://localhost:3000",
+  ],
 };
 
 export default nextConfig;

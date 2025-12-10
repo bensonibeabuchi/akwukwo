@@ -78,7 +78,7 @@ resource "azurerm_service_plan" "asp" {
   location = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   os_type = "Linux"
-  sku_name = "S1"
+  sku_name = "P1v3"
 }
 
 
@@ -320,8 +320,7 @@ resource "azurerm_linux_web_app" "app_with_secrets" {
   site_config {
     always_on = true
     application_stack {
-      docker_image = "${var.dockerhub_username}/akwukwo"
-      docker_image_tag = "latest"
+
     }
   }
 
